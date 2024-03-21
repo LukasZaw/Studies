@@ -1,6 +1,6 @@
 # Studies
  All of my projects, files, notes form university.
- This repository was created to organize my files from studyies at the [University of Technology in Częstochowa](https://pcz.pl) (Poland).
+ This repository was created to organize my files from studies at the [University of Technology in Częstochowa](https://pcz.pl) (Poland).
 
 <br>
 
@@ -28,3 +28,5 @@
 ## Projects:
 * 
 
+## Description of important subjects
+*will be here*
