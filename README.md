@@ -1,8 +1,10 @@
 # Studies
  All of my projects, files, notes form university.
+ This repository was created to organize my files from studyies at the University of Technology in Częstochowa (Poland).
 
+<br>
 
-## List of subjects
+## List of subjects:
 
 ### Semestr 2
 * Podstawy programowania
@@ -22,4 +24,7 @@
 * Programowanie niskopoziomowe
 * Paradygmaty programowania
 * Grafika komputerowa i wizualizacja
+
+## Projects:
+* 
 
