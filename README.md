@@ -7,7 +7,7 @@
 ## List of subjects:
 
 ### [Semestr 2](https://pcz.pl)
-* Podstawy programowania
+* [Podstawy programowania](Semestr-2/Algorytmy-numeryczne)
 * Algorytmy numeryczne
 
 ### Semestr 3
