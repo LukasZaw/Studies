@@ -1,0 +1,16 @@
+﻿  Lab04_x86.cpp
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(11,5): error C4235: użyto niestandardowego rozszerzenia: słowo kluczowe „__asm” nie jest obsługiwane w tej architekturze
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(12,9): error C2065: "mov": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(12,13): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „ecx”
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(12,13): error C2065: "ecx": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(13,9): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „mov”
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(13,9): error C2065: "mov": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(13,13): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „ebx”
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(13,13): error C2065: "ebx": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(15,9): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „petla”
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(16,9): error C2065: "mov": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(16,13): error C2146: błąd składniowy: brakuje „;” przed identyfikatorem „eax”
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(16,13): error C2065: "eax": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(16,23): error C2760: błąd składniowy: element „+” był nieoczekiwany w tym miejscu; oczekiwano elementu „,”
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(16,29): error C2065: "ecx": niezadeklarowany identyfikator
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab04_x86\Lab04_x86.cpp(16,36): error C2059: błąd składniowy: „]”
