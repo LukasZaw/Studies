@@ -5,10 +5,12 @@ using namespace std;
 
 int main()
 {
-    int n = 4;
-    int* v = new int [n] { 1, 2, 3, 4 };
+    int n = 5;
+    int* v = new int [n] { 43, 24, 54, 123, 545 };
+    int x;
 
     //Zadanie 1
+    //Podniesione do kwadratu
     /*__asm {
         mov ecx, n
         mov ebx, v
@@ -23,6 +25,7 @@ int main()
     }*/
 
     //Zadanie 2
+    //Parzyste do kwadratu
     /*__asm {
         push esi
         push ebx
@@ -55,20 +58,57 @@ int main()
     }*/
 
     //Zadanie 3
-    __asm {
+    //Co drugi wyzerowny
+    /*__asm {
+        push esi
+        push ebx
+
+        mov ecx, n
+        mov esi, v
+        xor ebx, ebx
+
+        petla:
+            mov [esi + 4 * ecx - 4], 0
+            
+            dec ecx
+            dec ecx
+            cmp ecx, 0
+        jg petla
+
+
+        pop esi
+        pop ebx
+    }*/
+
+    //Zadanie 4
+    //Minimum
+    /*__asm {
         push esi
         push ebx
 
         mov ecx, n
         mov esi, v
 
+        mov ebx, [esi + 4 * ecx - 4]
+        
+        petla:
+            mov eax, [esi + 4 * ecx - 4]
+            cmp ebx, eax
+            jl skokMniejsze
+                mov ebx, [esi + 4 * ecx - 4]
 
+
+                skokMniejsze:
+            dec ecx
+        jnz petla
+
+        mov x, ebx
 
         pop esi
         pop ebx
-    }
+    }*/
 
-
+    cout << "X: " << x << endl;
     for (int i = 0; i < n; i++)
     {
         cout << v[i] << " ";
