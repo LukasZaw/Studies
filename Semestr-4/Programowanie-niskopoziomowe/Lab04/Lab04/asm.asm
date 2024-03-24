@@ -47,4 +47,38 @@ fun01 PROC
 fun01 ENDP
 
 
+fun02 PROC
+
+	movsxd rax, dword ptr [rcx+4*rdx-4]
+
+	petla:
+		movsxd r8, dword ptr [rcx+4*rdx-4]
+		cmp rax, r8
+		jg skokMniejsze
+			movsxd rax, dword ptr [rcx+4*rdx-4]
+		
+			skokMniejsze:
+		dec rdx
+	jnz petla
+
+	ret
+fun02 ENDP
+
+fun03 PROC
+
+	mov rbx, rdx
+
+	petla:
+		movsxd rax, dword ptr [rcx+4*r9-4]
+		movsxd r10, dword ptr [rbx+4*r9-4]
+		xor rdx, rdx
+		idiv r10
+
+		mov [r8+4*r9-4], rax
+		dec r9
+	jnz petla
+
+	ret
+fun03 ENDP
+
 END

@@ -35,7 +35,7 @@ int main()
 
 
         mov ebx, 2
-        
+
 
         petla:
             mov eax, [esi + 4 * ecx - 4]
@@ -69,7 +69,7 @@ int main()
 
         petla:
             mov [esi + 4 * ecx - 4], 0
-            
+
             dec ecx
             dec ecx
             cmp ecx, 0
@@ -80,7 +80,7 @@ int main()
         pop ebx
     }*/
 
-    //Zadanie 4
+    //Zadanie 5
     //Minimum
     /*__asm {
         push esi
@@ -90,7 +90,7 @@ int main()
         mov esi, v
 
         mov ebx, [esi + 4 * ecx - 4]
-        
+
         petla:
             mov eax, [esi + 4 * ecx - 4]
             cmp ebx, eax
