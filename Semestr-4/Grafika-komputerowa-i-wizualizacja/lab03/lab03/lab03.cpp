@@ -101,6 +101,7 @@ void display(float size) {
 	glEnd();
 
 
+
 	//trojkat
 	glShadeModel(GL_SMOOTH);
 	glBegin(GL_TRIANGLES);
