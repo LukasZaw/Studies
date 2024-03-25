@@ -6,7 +6,8 @@ using namespace std;
 int main()
 {
     int n = 5;
-    int* v = new int [n] { 43, 24, 54, 123, 545 };
+    int* v = new int [n] { 1,2,3,4,5};
+    int* w = new int [n] { 53,7,8,23,10};
     int x;
 
     //Zadanie 1
@@ -108,7 +109,32 @@ int main()
         pop ebx
     }*/
 
-    cout << "X: " << x << endl;
+    //Zadanie 8
+    //Suma wektorow
+    __asm {
+        push esi
+        push ebx
+        push edi
+
+        mov ecx, n
+        mov esi, v
+        mov edi, w
+        
+        petla:
+            mov eax, [edi +4*ecx -4]
+            add eax, [esi +4*ecx -4]
+            mov [esi +4*ecx -4], eax
+
+            dec ecx
+        jnz petla
+
+
+        pop esi
+        pop ebx
+        pop edi
+    }
+
+    //cout << "X: " << x << endl;
     for (int i = 0; i < n; i++)
     {
         cout << v[i] << " ";

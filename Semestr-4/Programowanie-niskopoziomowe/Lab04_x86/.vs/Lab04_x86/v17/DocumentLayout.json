@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\",
+  "WorkspaceRootPath": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{108465A7-1CFD-4A18-828D-9A02C982E245}|Lab04_x86.vcxproj|C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\Lab04_x86.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{108465A7-1CFD-4A18-828D-9A02C982E245}|Lab04_x86.vcxproj|C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\Lab04_x86.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{108465A7-1CFD-4A18-828D-9A02C982E245}|Lab04_x86.vcxproj|solutionrelative:Lab04_x86.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Lab04_x86.cpp",
-              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\Lab04_x86.cpp",
+              "DocumentMoniker": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\Lab04_x86.cpp",
               "RelativeDocumentMoniker": "Lab04_x86.cpp",
-              "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\Lab04_x86.cpp",
+              "ToolTip": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04_x86\\Lab04_x86.cpp",
               "RelativeToolTip": "Lab04_x86.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAAAHIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-24T16:58:09.908Z",
               "EditorCaption": ""
