@@ -1,6 +1,22 @@
 ﻿  Lab04.cpp
-C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(92,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
-C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(93,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
-C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(94,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
-C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(103,33): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(99,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(100,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(101,36): warning C4244: "=": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(110,33): warning C4244: "inicjowanie": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(172,58): warning C4244: "+=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(173,58): warning C4244: "+=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(174,58): warning C4244: "+=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(179,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(180,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(181,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(205,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(206,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(207,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(231,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(232,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(233,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(257,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(258,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\Lab04.cpp(259,32): warning C4244: "=": konwersja z "float" do "int", możliwa utrata danych
+LINK : warning LNK4098: domyślna biblioteka "MSVCRT" powoduje konflikt z innymi bibliotekami; użyj opcji /NODEFAULTLIB:biblioteka
   Lab04.vcxproj -> C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Grafika-komputerowa-i-wizualizacja\Lab04\x64\Debug\Lab04.exe

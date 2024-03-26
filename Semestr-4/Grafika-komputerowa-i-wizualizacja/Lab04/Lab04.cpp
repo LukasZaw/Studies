@@ -2,7 +2,7 @@
 #include<iostream> 
 #include<fstream>
 #include<stdlib.h>
-
+#include <algorithm>
 using namespace std;
 
 int lw;
@@ -11,7 +11,21 @@ int lk;
 const int w = 1339;
 const int k = 2000;
 
-int m[3][3] = { 1,1,1,1,1,1,1,1,1 };
+double mA[3][3] = { 0.0625, 0.125, 0.0625,
+                 0.125, 0.25, 0.125,
+                 0.0625, 0.125, 0.0625 };
+
+int mS[3][3] = { 0,-1,0,
+                -1,5,-1,
+               0,-1,0 };
+
+int mD[3][3] = { -1,-1,-1,
+                -1,8,-1,
+                -1,-1,-1 };
+
+int mF[3][3] = { -2,-1,0,
+                -1,1,1,
+                0,1,2 };
 
 int Rs[w][k];
 int Gs[w][k];
@@ -54,7 +68,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
         case GLFW_KEY_ESCAPE:
             glfwSetWindowShouldClose(window, GLFW_TRUE);
             break;
-        //Powrot do pierwotnego zdjecia
+            //Powrot do pierwotnego zdjecia
         case GLFW_KEY_Q:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -65,7 +79,8 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
                 }
             break;
 
-        //W - Inwersja kolorów : Zamiana kolorów na ich negatywy.
+            //Przekształcenia bezkontekstowe
+            //W - Inwersja kolorów : Zamiana kolorów na ich negatywy.
         case GLFW_KEY_W:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -76,7 +91,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
                 }
             break;
 
-        //E - Zwiększenie kontrastu - mnożenie wartości pikseli przez stałą
+            //E - Zwiększenie kontrastu - mnożenie wartości pikseli przez stałą
         case GLFW_KEY_E:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -87,7 +102,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
                 }
             break;
 
-        //R - Odcienie szarości - ITU-R BT.601, Luminancja
+            //R - Odcienie szarości - ITU-R BT.601, Luminancja
         case GLFW_KEY_R:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -119,7 +134,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
             break;
 
 
-        //Z - Zmniejszenie jasnosci (-10)
+            //Z - Zmniejszenie jasnosci (-10)
         case GLFW_KEY_Z:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -129,7 +144,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
                     Bn[i][j] = Bn[i][j] - 10;
                 }
             break;
-        //X - Zwiększenie jasnosci (+10)
+            //X - Zwiększenie jasnosci (+10)
         case GLFW_KEY_X:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -140,44 +155,137 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
                 }
             break;
 
-        case GLFW_KEY_C:
-            for (int i = 1; i < lw - 1; ++i)
-                for (int j = 1; j < lk - 1; ++j)
+
+            //Przekształcenia kontekstowe
+        //A - Filtr uśredniający
+        case GLFW_KEY_A:
+            for (int i = 0; i < lw; ++i)
+                for (int j = 0; j < lk; ++j)
                 {
-                    Rn[i][j] = (Rs[i - 1][j - 1] * m[0][0] +
-                        Rs[i - 1][j] * m[0][1] +
-                        Rs[i - 1][j + 1] * m[0][2] +
-                        Rs[i][j - 1] * m[1][0] +
-                        Rs[i][j] * m[1][1] +
-                        Rs[i][j + 1] * m[1][2] +
-                        Rs[i + 1][j - 1] * m[2][0] +
-                        Rs[i + 1][j] * m[2][1] +
-                        Rs[i + 1][j + 1] * m[2][2])
-                        / (m[0][0]) + (m[0][1]) + (m[0][2]) + (m[1][0]) + (m[1][1]) + (m[1][2]) + (m[2][0]) + (m[2][1]) + (m[2][2]);
-
-                    Gn[i][j] = (Gs[i - 1][j - 1] * m[0][0] +
-                        Gs[i - 1][j] * m[0][1] +
-                        Gs[i - 1][j + 1] * m[0][2] +
-                        Gs[i][j - 1] * m[1][0] +
-                        Gs[i][j] * m[1][1] +
-                        Gs[i][j + 1] * m[1][2] +
-                        Gs[i + 1][j - 1] * m[2][0] +
-                        Gs[i + 1][j] * m[2][1] +
-                        Gs[i + 1][j + 1] * m[2][2])
-                        / (m[0][0]) + (m[0][1]) + (m[0][2]) + (m[1][0]) + (m[1][1]) + (m[1][2]) + (m[2][0]) + (m[2][1]) + (m[2][2]);
-
-                    Bn[i][j] = (Bs[i - 1][j - 1] * m[0][0] +
-                        Bs[i - 1][j] * m[0][1] +
-                        Bs[i - 1][j + 1] * m[0][2] +
-                        Bs[i][j - 1] * m[1][0] +
-                        Bs[i][j] * m[1][1] +
-                        Bs[i][j + 1] * m[1][2] +
-                        Bs[i + 1][j - 1] * m[2][0] +
-                        Bs[i + 1][j] * m[2][1] +
-                        Bs[i + 1][j + 1] * m[2][2])
-                        / (m[0][0] + m[0][1] + m[0][2] + m[1][0] + m[1][1] + m[1][2] + m[2][0] + m[2][1] + m[2][2]);
+                    float sumR = 0.0f;
+                    float sumG = 0.0f;
+                    float sumB = 0.0f;
+                    
+                    for (int k = -1; k <= 1; ++k) {
+                        for (int l = -1; l <= 1; ++l) {
+                            if (i + k >= 0 && i + k < lw && j + l >= 0 && j + l < lk) {
+                                sumR += Rs[i + k][j + l] * mA[k + 1][l + 1];
+                                sumG += Gs[i + k][j + l] * mA[k + 1][l + 1];
+                                sumB += Bs[i + k][j + l] * mA[k + 1][l + 1];
+                            }
+                        }
+                    }
+                    
+                    Rn[i][j] = sumR;
+                    Gn[i][j] = sumG;
+                    Bn[i][j] = sumB;
                 }
+                
             break;
+
+        //S - Filtr wyostrzający
+        case GLFW_KEY_S:
+            for (int i = 0; i < lw; ++i)
+                for (int j = 0; j < lk; ++j)
+                {
+                    float sumR = 0.0f;
+                    float sumG = 0.0f;
+                    float sumB = 0.0f;
+
+                    for (int k = -1; k <= 1; ++k) {
+                        for (int l = -1; l <= 1; ++l) {
+                            if (i + k >= 0 && i + k < lw && j + l >= 0 && j + l < lk) {
+                                sumR += Rs[i + k][j + l] * mS[k + 1][l + 1];
+                                sumG += Gs[i + k][j + l] * mS[k + 1][l + 1];
+                                sumB += Bs[i + k][j + l] * mS[k + 1][l + 1];
+                            }
+                        }
+                    }
+
+                    Rn[i][j] = sumR;
+                    Gn[i][j] = sumG;
+                    Bn[i][j] = sumB;
+                }
+
+            break;
+        
+        //D - Filtr krawędziowy (outline)
+        case GLFW_KEY_D:
+            for (int i = 0; i < lw; ++i)
+                for (int j = 0; j < lk; ++j)
+                {
+                    float sumR = 0.0f;
+                    float sumG = 0.0f;
+                    float sumB = 0.0f;
+
+                    for (int k = -1; k <= 1; ++k) {
+                        for (int l = -1; l <= 1; ++l) {
+                            if (i + k >= 0 && i + k < lw && j + l >= 0 && j + l < lk) {
+                                sumR += Rs[i + k][j + l] * mD[k + 1][l + 1];
+                                sumG += Gs[i + k][j + l] * mD[k + 1][l + 1];
+                                sumB += Bs[i + k][j + l] * mD[k + 1][l + 1];
+                            }
+                        }
+                    }
+
+                    Rn[i][j] = sumR;
+                    Gn[i][j] = sumG;
+                    Bn[i][j] = sumB;
+                }
+
+            break;
+
+            //F - Filtr  (emboss)
+        case GLFW_KEY_F:
+            for (int i = 0; i < lw; ++i)
+                for (int j = 0; j < lk; ++j)
+                {
+                    float sumR = 0.0f;
+                    float sumG = 0.0f;
+                    float sumB = 0.0f;
+
+                    for (int k = -1; k <= 1; ++k) {
+                        for (int l = -1; l <= 1; ++l) {
+                            if (i + k >= 0 && i + k < lw && j + l >= 0 && j + l < lk) {
+                                sumR += Rs[i + k][j + l] * mF[k + 1][l + 1];
+                                sumG += Gs[i + k][j + l] * mF[k + 1][l + 1];
+                                sumB += Bs[i + k][j + l] * mF[k + 1][l + 1];
+                            }
+                        }
+                    }
+
+                    Rn[i][j] = sumR;
+                    Gn[i][j] = sumG;
+                    Bn[i][j] = sumB;
+                }
+
+            break;
+
+            //G - Filtr maksimum
+        case GLFW_KEY_G:
+            for (int i = 0; i < lw; ++i)
+                for (int j = 0; j < lk; ++j)
+                {
+                    int minR = 0;
+                    int minG = 0;
+                    int minB = 0;
+
+                    for (int k = -1; k <= 1; ++k) {
+                        for (int l = -1; l <= 1; ++l) {
+                            if (i + k >= 0 && i + k < lw && j + l >= 0 && j + l < lk) {
+                                minR = max(minR, Rs[i + k][j + l]);
+                                minG = max(minG, Gs[i + k][j + l]);
+                                minB = max(minB, Bs[i + k][j + l]);
+                            }
+                        }
+                    }
+                    Rn[i][j] = minR;
+                    Gn[i][j] = minG;
+                    Bn[i][j] = minB;
+                }
+
+            break;
+
         }
     }
 }
