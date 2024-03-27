@@ -91,7 +91,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
                 }
             break;
 
-            //E - Zwiększenie kontrastu - mnożenie wartości pikseli przez stałą
+            //E - Zmniejszenie kontrastu - mnożenie wartości pikseli przez stałą
         case GLFW_KEY_E:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -235,7 +235,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
             break;
 
-            //F - Filtr  (emboss)
+            //F - Filtr (emboss)
         case GLFW_KEY_F:
             for (int i = 0; i < lw; ++i)
                 for (int j = 0; j < lk; ++j)
@@ -333,7 +333,7 @@ int main(void)
     if (!glfwInit())
         return -1;
 
-    window = glfwCreateWindow(800, 600, "Przykladowe Okno GLFW", NULL, NULL);
+    window = glfwCreateWindow(800, 600, "Lukasz Zawodzinski - grafika komputerowa", NULL, NULL);
 
     if (!window)
     {
