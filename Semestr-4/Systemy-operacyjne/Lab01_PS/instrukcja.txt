@@ -1,0 +1,69 @@
+2. 
+New-Item -Path "c:\" -Name "Dom" -ItemType "directory"
+New-Item -Path "c:\Dom" -Name "Drzwi" -ItemType "directory"
+New-Item -Path "c:\Dom" -Name "Okno" -ItemType "directory"
+
+3. 
+Set-Location C:\Dom
+New-Item -ItemType Directory -Path "\Drzwi" -Force
+
+"Mosiężna" | Out-File -FilePath ".\Drzwi\Klamka.txt" -Force
+
+"Wpuszczany" | Out-File -FilePath ".\Drzwi\Zamek.txt" -Force
+
+4.
+Set-ItemProperty -Path ".\Drzwi\Klamka.txt" -Name Attributes -Value ([System.IO.FileAttributes]::Hidden)
+Set-ItemProperty -Path ".\Drzwi\Zamek.txt" -Name Attributes -Value ([System.IO.FileAttributes]::ReadOnly)
+
+5.
+Copy-Item -Path ".\Drzwi\zamek.txt" -Destination ".\Okno\zamek123.txt" -Force
+
+6.
+Get-Content -Path ".\Okno\zamek123.txt"
+
+7.
+notepad ".\Okno\zamek123.txt"
+
+8.
+"123asd" | Out-File -FilePath ".\Drzwi\Zamek.txt" -Force
+
+9.
+Get-ChildItem -Path ".\Drzwi"
+
+10.
+Get-Help Get-ChildItem -ShowWindow
+
+11.
+Get-ChildItem -Path "." -Recurse -Include "*.txt" -Force
+
+12.
+Get-ChildItem -Path "." -Recurse -Include "*.txt" -Force | Select-Object -ExpandProperty Name | Out-File -FilePath ".\Dokumenty.txt" -Force
+
+13.
+New-Item -ItemType Directory -Path ".\Dokumenty" -Force
+
+14.
+Get-ChildItem -Path "." -Recurse -Include "*.txt" | Move-Item -Destination ".\Dokumenty"
+
+15.
+New-Item -ItemType Directory -Path ".\Katalogi" -Force
+New-Item -ItemType Directory -Path ".\Parzyste" -Force
+
+16.
+function UtworzKatalogi {
+    param(
+        [string]$FolderRodzic = ".\Katalogi",
+        [int]$LiczbaKatalogów = 9
+    )
+
+    for ($i = 1; $i -le $LiczbaKatalogów; $i++) {
+        $nazwaKatalogu = "Katalog$i"
+        $sciezkaKatalogu = Join-Path -Path $FolderRodzic -ChildPath $nazwaKatalogu
+        New-Item -ItemType Directory -Path $sciezkaKatalogu -Force
+    }
+}
+
+UtworzKatalogi
+
+17.
+Get-ChildItem -Path ".\Katalogi" | Where-Object { $_.PSIsContainer -and $_.Name -match 'Katalog[0-9]*[02468]$' } | Move-Item -Destination ".\Parzyste"
