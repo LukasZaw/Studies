@@ -7,8 +7,8 @@
 ## List of subjects:
 
 ### Semestr 2
-* [Podstawy programowania](Semestr-2/Algorytmy-numeryczne)
-* Algorytmy numeryczne
+* Podstawy programowania
+* [Algorytmy numeryczne](Semestr-2/Algorytmy-numeryczne)
 
 ### Semestr 3
 * Metody programowania
