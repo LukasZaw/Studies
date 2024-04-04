@@ -1,0 +1,15 @@
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\bin\Debug\net8.0\PO.Lab04.exe
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\bin\Debug\net8.0\PO.Lab04.deps.json
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\bin\Debug\net8.0\PO.Lab04.runtimeconfig.json
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\bin\Debug\net8.0\PO.Lab04.dll
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\bin\Debug\net8.0\PO.Lab04.pdb
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.AssemblyInfoInputs.cache
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.AssemblyInfo.cs
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.sourcelink.json
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.dll
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\refint\PO.Lab04.dll
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.pdb
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\PO.Lab04.genruntimeconfig.cache
+C:\Users\Łukasz\Documents\Lukasz_Zawodzinski\PO\PO.Lab04\obj\Debug\net8.0\ref\PO.Lab04.dll

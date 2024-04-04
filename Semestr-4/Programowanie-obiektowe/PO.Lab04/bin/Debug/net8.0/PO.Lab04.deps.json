@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PO.Lab04/1.0.0": {
+        "runtime": {
+          "PO.Lab04.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PO.Lab04/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
