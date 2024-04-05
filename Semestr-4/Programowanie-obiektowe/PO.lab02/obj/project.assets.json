@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-obiektowe\\PO.Lab04\\PO.Lab04.csproj",
-      "projectName": "PO.Lab04",
-      "projectPath": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-obiektowe\\PO.Lab04\\PO.Lab04.csproj",
+      "projectUniqueName": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-obiektowe\\PO.lab02\\PO.lab02.csproj",
+      "projectName": "PO.lab02",
+      "projectPath": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-obiektowe\\PO.lab02\\PO.lab02.csproj",
       "packagesPath": "C:\\Users\\lukas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-obiektowe\\PO.Lab04\\obj\\",
+      "outputPath": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-obiektowe\\PO.lab02\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lukas\\AppData\\Roaming\\NuGet\\NuGet.Config",
