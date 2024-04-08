@@ -1,0 +1,15 @@
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.AssemblyInfoInputs.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.AssemblyInfo.cs
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.sourcelink.json
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\bin\Debug\net8.0\Lab05.BLL.deps.json
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\bin\Debug\net8.0\Lab05.BLL.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\bin\Debug\net8.0\Lab05.BLL.pdb
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\refint\Lab05.BLL.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.pdb
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\ref\Lab05.BLL.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\bin\Debug\net8.0\Generic.Extensions.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.csproj.AssemblyReference.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Lab05\Lab05.BLL\obj\Debug\net8.0\Lab05.BLL.csproj.Up2Date

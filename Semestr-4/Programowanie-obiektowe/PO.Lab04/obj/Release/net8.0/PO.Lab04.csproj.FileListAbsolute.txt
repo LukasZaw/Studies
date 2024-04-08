@@ -1,0 +1,6 @@
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\PO.Lab04\obj\Release\net8.0\PO.Lab04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\PO.Lab04\obj\Release\net8.0\PO.Lab04.AssemblyInfoInputs.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\PO.Lab04\obj\Release\net8.0\PO.Lab04.AssemblyInfo.cs
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\PO.Lab04\obj\Release\net8.0\PO.Lab04.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\PO.Lab04\obj\Release\net8.0\PO.Lab04.sourcelink.json
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\PO.Lab04\obj\Release\net8.0\PO.Lab04.csproj.AssemblyReference.cache

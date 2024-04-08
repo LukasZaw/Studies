@@ -1,0 +1,12 @@
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\bin\Release\net8.0\Generic.Extensions.deps.json
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\bin\Release\net8.0\Generic.Extensions.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\bin\Release\net8.0\Generic.Extensions.pdb
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.AssemblyInfoInputs.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.AssemblyInfo.cs
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.sourcelink.json
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\refint\Generic.Extensions.dll
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\Generic.Extensions.pdb
+C:\Users\lukas\Documents\GitHub\Studies\Semestr-4\Programowanie-obiektowe\Generic.Extensions\obj\Release\net8.0\ref\Generic.Extensions.dll
