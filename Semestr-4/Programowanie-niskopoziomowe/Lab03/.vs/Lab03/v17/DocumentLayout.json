@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{14058633-4637-4B65-9562-BDB9141A92BB}|Lab03\\Lab03.vcxproj|C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\Lab03\\masm.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{14058633-4637-4B65-9562-BDB9141A92BB}|Lab03\\Lab03.vcxproj|solutionrelative:Lab03\\masm.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14058633-4637-4B65-9562-BDB9141A92BB}|Lab03\\Lab03.vcxproj|C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\Lab03\\Lab03.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{14058633-4637-4B65-9562-BDB9141A92BB}|Lab03\\Lab03.vcxproj|solutionrelative:Lab03\\Lab03.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 161,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "masm.asm",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\Lab03\\masm.asm",
+              "RelativeDocumentMoniker": "Lab03\\masm.asm",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\Lab03\\masm.asm",
+              "RelativeToolTip": "Lab03\\masm.asm",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-10T12:50:30.937Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 197,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Lab03.cpp",
+              "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\Lab03\\Lab03.cpp",
+              "RelativeDocumentMoniker": "Lab03\\Lab03.cpp",
+              "ToolTip": "C:\\Users\\\u0141ukasz\\Desktop\\\u0141ukasz\\Assembly\\Lab03\\Lab03\\Lab03.cpp",
+              "RelativeToolTip": "Lab03\\Lab03.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-10T12:50:01.152Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
