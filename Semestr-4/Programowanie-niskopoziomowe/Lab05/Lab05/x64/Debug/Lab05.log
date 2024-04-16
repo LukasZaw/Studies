@@ -1,7 +1,0 @@
-﻿  Assembling asm.asm...
-asm.asm(57): warning A6004: procedure argument or local not referenced : mm
-asm.asm(57): warning A6004: procedure argument or local not referenced : v
-asm.asm(57): warning A6004: procedure argument or local not referenced : u
-asm.asm(57): warning A6004: procedure argument or local not referenced : m
-  Lab05.cpp
-  Lab05.vcxproj -> C:\Users\Łukasz\Documents\GitHub\Studies\Semestr-4\Programowanie-niskopoziomowe\Lab05\x64\Debug\Lab05.exe
