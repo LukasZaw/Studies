@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab02a\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6FE56F53-0426-4CB9-8FA3-C08A71299909}|lab2a\\lab2a.vcxproj|C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab02a\\lab2a\\lab2a.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6FE56F53-0426-4CB9-8FA3-C08A71299909}|lab2a\\lab2a.vcxproj|solutionrelative:lab2a\\lab2a.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lab2a.cpp",
+              "DocumentMoniker": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab02a\\lab2a\\lab2a.cpp",
+              "RelativeDocumentMoniker": "lab2a\\lab2a.cpp",
+              "ToolTip": "C:\\Users\\lukas\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab02a\\lab2a\\lab2a.cpp",
+              "RelativeToolTip": "lab2a\\lab2a.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-25T12:43:58.64Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
