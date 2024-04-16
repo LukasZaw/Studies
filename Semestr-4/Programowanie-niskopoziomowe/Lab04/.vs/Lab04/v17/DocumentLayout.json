@@ -18,8 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 161,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -32,7 +44,7 @@
               "RelativeDocumentMoniker": "Lab04\\asm.asm",
               "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04\\Lab04\\asm.asm",
               "RelativeToolTip": "Lab04\\asm.asm",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACcAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-03-24T20:40:29.813Z",
               "EditorCaption": ""
@@ -51,7 +63,7 @@
               "RelativeDocumentMoniker": "Lab04\\Lab04.cpp",
               "ToolTip": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab04\\Lab04\\Lab04.cpp",
               "RelativeToolTip": "Lab04\\Lab04.cpp",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-23T16:02:02.232Z",
               "EditorCaption": ""

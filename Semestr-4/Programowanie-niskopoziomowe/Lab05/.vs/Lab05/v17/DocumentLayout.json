@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab05\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45474788-0FD1-46EB-83C3-ECB9631475BC}|Lab05.vcxproj|C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab05\\Lab05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{45474788-0FD1-46EB-83C3-ECB9631475BC}|Lab05.vcxproj|solutionrelative:Lab05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{45474788-0FD1-46EB-83C3-ECB9631475BC}|Lab05.vcxproj|C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab05\\asm.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{45474788-0FD1-46EB-83C3-ECB9631475BC}|Lab05.vcxproj|solutionrelative:asm.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45474788-0FD1-46EB-83C3-ECB9631475BC}|Lab05.vcxproj|C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab05\\Lab05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{45474788-0FD1-46EB-83C3-ECB9631475BC}|Lab05.vcxproj|solutionrelative:Lab05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "asm.asm",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab05\\asm.asm",
               "RelativeDocumentMoniker": "asm.asm",
@@ -57,7 +57,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Lab05.cpp",
               "DocumentMoniker": "C:\\Users\\\u0141ukasz\\Documents\\GitHub\\Studies\\Semestr-4\\Programowanie-niskopoziomowe\\Lab05\\Lab05.cpp",
               "RelativeDocumentMoniker": "Lab05.cpp",
