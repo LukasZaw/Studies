@@ -24,7 +24,7 @@ int main()
     }
     cout << w << endl;
 
-    cout << "Zadanie 1\n";
+    cout << "Zadanie 2\n";
     __asm {
         mov ecx, a
         mov edx, b
