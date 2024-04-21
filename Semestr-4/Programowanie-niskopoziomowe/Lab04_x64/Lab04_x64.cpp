@@ -10,6 +10,7 @@ extern "C" __int64 zad2(int*, int);
 extern "C" __int64 zad3(int*, int);
 extern "C" __int64 zad4(int*, int);
 extern "C" __int64 zad9(int*, int*, int*, int);
+extern "C" __int64 zad8(int*, int*, int);
 
 
 
@@ -44,12 +45,14 @@ int main()
     zad2(v, N);
     for (int i = 0; i < N; i++)
         cout << v[i] << ", ";
+    cout << endl;
 
     v = new int[N] {1, 2, 3, 4};
     cout << "Zadanie 3" << endl;
     zad3(v, N);
     for (int i = 0; i < N; i++)
         cout << v[i] << ", ";
+    cout << endl;
 
     int* a = new int[N] {8, 7, 25, 90};
     int* b = new int[N] {2, 3, 5, 9};
@@ -58,4 +61,12 @@ int main()
     zad9(a, b, c, N);
     for (int i = 0; i < N; i++)
         cout << c[i] << ", ";
+    cout << endl;
+
+    int* tab1 = new int[N] {8, 7, 2, 5};
+    int* tab2 = new int[N] {2, 3, 5, 9};
+    cout << "Zadanie 8" << endl;
+    zad8(tab1, tab2,  N);
+    for (int i = 0; i < N; i++)
+        cout << tab1[i] << ", ";
 }

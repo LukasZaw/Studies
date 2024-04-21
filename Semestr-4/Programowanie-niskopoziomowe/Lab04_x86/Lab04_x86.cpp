@@ -36,18 +36,15 @@ int main()
     }
     cout << w << endl;
 
-    cout << "Zadanie 5\n";
+    cout << "Zadanie 8 \n";
     __asm {
+        push ebx
         push esi
         push edi
-        push ebx
 
         mov esi, v
         mov edi, u
         mov edx, N
-
-        
-
 
         petla2:
             mov eax, [edi + 4 * edx - 4]
@@ -62,7 +59,7 @@ int main()
     }
     for (int i = 0; i < N; i++)
         cout << v[i] << ", ";
-
+    cout << endl;
 
 
     return 0;

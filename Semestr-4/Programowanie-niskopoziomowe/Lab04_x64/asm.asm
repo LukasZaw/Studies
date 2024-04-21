@@ -144,4 +144,18 @@ zad9 PROC ;rcx - tablica a, rdx - tablica b, r8 - tab c, r9 - N
 	ret
 zad9 ENDP
 
+zad8 PROC uses rsi rdi;rcx - tablica a, rdx - tablica b, r8 - N
+	mov rdi, r8
+
+	petla:
+		movsxd rax, dword ptr [rdx + 4*rdi - 4]
+		add [rcx + 4*rdi - 4], eax
+
+		dec rdi
+	jnz petla
+
+	ret
+zad8 ENDP
+
+
 END
