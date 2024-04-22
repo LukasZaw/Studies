@@ -48,6 +48,7 @@ int main()
 
         petla2:
             mov eax, [edi + 4 * edx - 4]
+            imul eax, eax
             add [esi + 4 * edx - 4], eax
 
             dec edx

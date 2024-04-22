@@ -1,9 +1,10 @@
 .CODE
 
-zad2_32 PROC uses rsi rdi rbx, tab1:ptr, tab2:ptr, tab3:ptr, a:qword, b:qword
+zad2_32 PROC uses rsi rdi rbx, tab1:ptr, tab2:ptr, tab3:ptr, a:dword, b:dword
 		;rcx - tab1, rdx - tab2, r8 - tab3, r9 - a, stos - b
 	xor rax, rax
-	mov r11, b
+	xor r11, r11
+	mov r11d, b
 
 	petla1:
 		mov rsi, [rcx + 8*r9 - 8]

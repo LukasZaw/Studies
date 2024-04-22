@@ -59,7 +59,7 @@ int main()
         cout << endl;
     }
 
-    //zad2_32(tab1, tab2, tab3, n1, m1);
+    zad2_32(tab1, tab2, tab3, n1, m1);
 
     cout << "Wynik:\n";
     for (int i = 0; i < n1; i++)
