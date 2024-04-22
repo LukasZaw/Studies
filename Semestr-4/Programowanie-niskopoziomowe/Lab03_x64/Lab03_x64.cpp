@@ -11,6 +11,7 @@ extern "C" __int64 while_1(int, int, int);
 extern "C" __int64 zad3(int, int);
 extern "C" __int64 zad4(int, int, int);
 extern "C" __int64 zad6(int);
+extern "C" __int64 min(int, int, int);
 
 
 int for_11(int N)
@@ -68,4 +69,7 @@ int main()
 
     cout << "Zadanie 6\n";
     cout << zad6(5) << endl;
+
+    cout << "\nMinimum z 3 liczb\n";
+    cout << min(5, 2, 4) << endl;
 }

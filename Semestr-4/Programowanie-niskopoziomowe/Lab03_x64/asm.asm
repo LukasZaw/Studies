@@ -192,4 +192,19 @@ zad6 PROC ;rcx - a
 	ret
 zad6 ENDP
 
+min PROC ;rcx - a, rdx, r8
+	
+	cmp rcx, rdx
+	jg skok1
+		mov rdx, rcx
+	skok1:
+	cmp rdx, r8
+	jg skok2
+		mov r8, rdx
+	skok2:
+	mov rax, r8
+	
+	ret
+min ENDP
+
 END

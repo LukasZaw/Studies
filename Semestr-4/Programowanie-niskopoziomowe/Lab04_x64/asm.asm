@@ -157,5 +157,13 @@ zad8 PROC uses rsi rdi;rcx - tablica a, rdx - tablica b, r8 - N
 	ret
 zad8 ENDP
 
+olb PROC uses rdi;rcx - tablica a, rdx - tablica b, r8 - N
+	
+	petla:
+		movsxd rdi
+
+
+	ret
+olb ENDP
 
 END

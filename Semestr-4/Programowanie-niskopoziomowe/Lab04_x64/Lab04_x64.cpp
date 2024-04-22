@@ -11,6 +11,7 @@ extern "C" __int64 zad3(int*, int);
 extern "C" __int64 zad4(int*, int);
 extern "C" __int64 zad9(int*, int*, int*, int);
 extern "C" __int64 zad8(int*, int*, int);
+extern "C" __int64 obl(int*, int*, int);
 
 
 
@@ -69,4 +70,12 @@ int main()
     zad8(tab1, tab2,  N);
     for (int i = 0; i < N; i++)
         cout << tab1[i] << ", ";
+
+
+    int* tab3 = new int[N] {4, 2, 1, 5};
+    int* tab4 = new int[N] {2, 3, 5, 3};
+    cout << "Dwa wektory, obliczenia" << endl;
+    obl(tab3, tab4, N);
+    for (int i = 0; i < N; i++)
+        cout << tab3[i] << ", ";
 }
