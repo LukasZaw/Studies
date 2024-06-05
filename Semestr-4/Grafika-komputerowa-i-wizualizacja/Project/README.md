@@ -4,7 +4,7 @@ H - wyswietlenie listy
 
 ------- Ruch obiektu -------
          
-         W A S D
+W A S D
 
 ------- Obrot kamery -------
    
@@ -24,9 +24,11 @@ H - wyswietlenie listy
  9 - Zmiana wypelniania kolorem
 
 --- Poruszanie oswietleniem ---
-         Strzalki Z X
+         
+Strzalki Z X
 
 ----- Zmiana oswietlenia -----
+ 
  Y - Swiatlo oglone
  U - Materialy
  I - Swiatlo 1 (ogolne)
@@ -34,9 +36,8 @@ H - wyswietlenie listy
  P - Swiatlo 3 (punktowe)
 
 ----- Parametry swiatla -----
+ 
  K L   - Zmiana rozwarcia reflektora
  C V   - Intensywnosc swiatla
  B N M - Zmiana koloru swiatla
  J - Przywracanie ustawien poczatkowych
-
-      ================
