@@ -1,0 +1,11 @@
+3.55374 czas wykonania obl. skalarnych
+2.82643 czas wykonania obl. wektorowych see
+2.64735 czas wykonania obl. wektorowych avx
+
+3.50562 czas wykonania obl. skalarnych
+2.69317 czas wykonania obl. wektorowych see
+2.37798 czas wykonania obl. wektorowych avx
+
+3.60983 czas wykonania obl. skalarnych
+2.63061 czas wykonania obl. wektorowych see
+2.40093 czas wykonania obl. wektorowych avx
