@@ -13,14 +13,19 @@ W A S D
 -------- Rzutowanie --------
  
  1 - Perspektywiczne / Ortogonalne
+ 
  2 - Skalowanie
 
 ------ Zmiana ustawien -----
  
  5 - Ukrywanie niewidocznych powierzchni
+ 
  6 - Wypelniania rysowania obiektow
+ 
  7 - Sprawdzania glebi
+ 
  8 - Nawijania rysowania trojkatow
+ 
  9 - Zmiana wypelniania kolorem
 
 --- Poruszanie oswietleniem ---
