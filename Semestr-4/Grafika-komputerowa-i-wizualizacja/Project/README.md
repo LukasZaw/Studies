@@ -3,16 +3,20 @@
 H - wyswietlenie listy
 
 ------- Ruch obiektu -------
-          W A S D
+         
+         W A S D
 
 ------- Obrot kamery -------
+   
    Ruch myszy + LPM, Q R
 
 -------- Rzutowanie --------
+ 
  1 - Perspektywiczne / Ortogonalne
  2 - Skalowanie
 
 ------ Zmiana ustawien -----
+ 
  5 - Ukrywanie niewidocznych powierzchni
  6 - Wypelniania rysowania obiektow
  7 - Sprawdzania glebi
