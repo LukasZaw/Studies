@@ -1,0 +1,20 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 5CC2-15C4
+
+ Directory of C:\Users\ukasz\Desktop\ukasz\Systemy\kolos1
+
+14.04.2024  21:48    <DIR>          .
+14.04.2024  21:48    <DIR>          ..
+14.04.2024  17:18               210 bat1.bat
+14.04.2024  20:00               164 bat2.bat
+14.04.2024  17:28               139 bat3.bat
+14.04.2024  20:00               196 bat4.bat
+14.04.2024  20:08               168 bat5.bat
+14.04.2024  21:37               815 bat6.bat
+14.04.2024  20:16    <DIR>          katalog
+14.04.2024  17:14    <DIR>          katalog.old
+14.04.2024  21:48                 0 lista.txt
+14.04.2024  20:03                79 plik - kopia.txt
+14.04.2024  20:03                79 plik.txt
+               9 File(s)          1ÿ850 bytes
+               4 Dir(s)  618ÿ665ÿ967ÿ616 bytes free
