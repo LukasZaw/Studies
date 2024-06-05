@@ -1,0 +1,4 @@
+pon
+wt
+sr
+czw
