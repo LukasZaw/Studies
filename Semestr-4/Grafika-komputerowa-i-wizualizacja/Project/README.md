@@ -1,3 +1,6 @@
+# Projekt Domu OpenGL, GLFW3
+![Projekt dom OpenGL](https://raw.githubusercontent.com/LukasZaw/Studies/main/Semestr-4/Grafika-komputerowa-i-wizualizacja/Project/Grafika.png)
+
 ======== Lista funkcjonalnosci ========
 
 H - wyswietlenie listy
