@@ -1,4 +1,5 @@
 ======== Lista funkcjonalnosci ========
+
 H - wyswietlenie listy
 
 ------- Ruch obiektu -------
