@@ -35,14 +35,21 @@ Strzalki Z X
 ----- Zmiana oswietlenia -----
  
  Y - Swiatlo oglone
+ 
  U - Materialy
+ 
  I - Swiatlo 1 (ogolne)
+ 
  O - Swiatlo 2 (reflektor)
+ 
  P - Swiatlo 3 (punktowe)
 
 ----- Parametry swiatla -----
  
  K L   - Zmiana rozwarcia reflektora
+ 
  C V   - Intensywnosc swiatla
+ 
  B N M - Zmiana koloru swiatla
+ 
  J - Przywracanie ustawien poczatkowych
