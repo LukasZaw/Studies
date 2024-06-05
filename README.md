@@ -26,7 +26,5 @@
 * [Grafika komputerowa i wizualizacja](Semestr-4/Grafika-komputerowa-i-wizualizacja)
 
 ## Projects:
-* 
+* [Projekt domu - OpenGL, GLFW3](Semestr-4/Grafika-komputerowa-i-wizualizacja/Project)
 
-## Description of important subjects
-*will be here*
