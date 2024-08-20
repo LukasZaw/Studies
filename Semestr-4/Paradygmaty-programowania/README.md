@@ -1,15 +1,16 @@
-Podstawy programowania funkcyjnego
+# Cele przedmiotu
 
-Typy i dopasowanie wzorców
+* Podstawy programowania funkcyjnego
+* Typy i dopasowanie wzorców
 
-Funkcje wyższych rzędów
+* Funkcje wyższych rzędów
 
-Funkcyjne struktury danych
+* Funkcyjne struktury danych
 
-Wzorce w programowaniu funkcyjnym
+* Wzorce w programowaniu funkcyjnym
 
-Języki multiparadygmatowe. Cechy programowania funkcyjnego w wiodącym języku multiparadygmatowym
+* Języki multiparadygmatowe. Cechy programowania funkcyjnego w wiodącym języku multiparadygmatowym
 
-Wzorce w językach multiparadygmatowych
+* Wzorce w językach multiparadygmatowych
 
-Podstawy programowania asynchronicznego w wybranym języku programowania
+* Podstawy programowania asynchronicznego w wybranym języku programowania
