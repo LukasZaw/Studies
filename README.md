@@ -7,15 +7,13 @@
 ## List of subjects:
 
 ### Semestr 2
-* Podstawy programowania
 * [Algorytmy numeryczne](Semestr-2/Algorytmy-numeryczne)
 
 ### Semestr 3
-* Metody programowania
-* Technika cyfrowa
-* Bazy danych (Databases)
-* Podstawy sieci komputerowych
-* Architektura systemów komputerowych
+* [Metody programowania](Semestr-3/Metody-programowania)
+* [Technika cyfrowa](Semestr-3/Technika-cyfrowa)
+* [Bazy danych (Databases)](Semestr-3/Bazy-danych)
+* [Architektura systemów komputerowych](Semestr-3/Architektura-systemow-komputerowych)
 
 ### Semestr 4
 * [Systemy operacyjne](Semestr-4/Grafika-komputerowa-i-wizualizacja)
