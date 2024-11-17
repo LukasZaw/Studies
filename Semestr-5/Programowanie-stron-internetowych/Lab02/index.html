@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>Labolatorium 2</h1>
+    <form>
+      <label for="fname">Imie:</label><br />
+      <input type="text" name="fname" value="Lukasz" /><br />
+      <label for="lname">Nazwisko:</label><br />
+      <input type="text" name="lname" value="Kowalski" /><br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <p>Ile masz lat?</p>
+    <form>
+      <input type="radio" name="ile_lat" id="mniej" />
+      <label for="mniej">Mniej niż 18</label><br />
+      <input type="radio" name="ile_lat" id="wiecej" />
+      <label for="wiecej">18 - 30 lat</label><br />
+      <input type="radio" name="ile_lat" id="naj" />
+      <label for="naj">Wiecej niż 30 lat</label><br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <form>
+      <p>Wybierz swoje zainteresowania:</p>
+      <input type="checkbox" name="hobby" id="1" />
+      <label for="1"></label>Sport<br />
+      <input type="checkbox" name="hobby" id="2" />
+      <label for="2"></label>Motoryzacja<br />
+      <input type="checkbox" name="hobby" id="3" />
+      <label for="3"></label>Film<br />
+      <input type="checkbox" name="hobby" id="4" />
+      <label for="4"></label>Moda<br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <form>
+      <label for="cars">Wybierz przedmiot:</label>
+      <select id="przedmiot" name="przedmiot">
+        <option value="pods">Podstawy prog</option>
+        <option value="stro">Programowanie stron internetowych</option>
+        <option value="tech">Technika cyfrowa</option>
+        <option value="zaaw">Zaawansowane programowanie stron inter</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <form>
+      <label for="cars">wybierz pojazd:</label>
+      <select id="cars" name="cars" size="3">
+        <option value="volvo">Samochod</option>
+        <option value="saab">Motocykl</option>
+        <option value="fiat">Samolot</option>
+        <option value="audi">Statek</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <form>
+      <textarea name="message" rows="10" cols="30">
+Programowanie stron internetowych...</textarea
+      >
+      <br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <form>
+      <label for="username">Login:</label><br />
+      <input type="text" id="username" name="username" /><br />
+      <label for="pwd">Hasło:</label><br />
+      <input type="password" id="pwd" name="pwd" />
+      <br /><br />
+      <input type="submit" value="Wyślij" />
+    </form>
+    <hr />
+    <br />
+    <input type="color" name="" id="" />
+    <input type="date" name="" id="" />
+    <input type="datetime-local" name="" id="" />
+    <input type="range" name="" id="" />
+    <input type="time" name="" id="" />
+    <input type="url" name="" id="" />
+    <br />
+    <hr />
+
+    <form action="/action_page.php" autocomplete="on">
+      <label for="fname">Imie:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="email">Nazwisko:</label>
+      <input type="text" id="email" name="email" /><br /><br />
+      <input type="submit" />
+    </form>
+    <hr />
+    <br />
+    <h2>Formularz:</h2>
+
+    <form novalidate>
+      <fieldset>
+        <legend>Dane personalne:</legend>
+        <label for="fname">Imię:</label><br />
+        <input type="text" id="fname" name="fname" value="Lukasz" /><br /><br />
+        <label for="lname">Nazwisko:</label><br />
+        <input type="text" id="lname" name="lname" value="Kowal" /><br /><br />
+        <label for="lname">Numer telefonu:</label><br />
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+          required
+          placeholder="123-457-890"
+        /><br /><br />
+        <label for="date"></label>Data urodzenia:<br />
+        <input type="date" name="date" id="date" /><br />
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>Informacje o studiach</legend>
+        <label for="index">Numer indeksu:</label><br />
+        <input
+          type="number"
+          name="index"
+          id="index"
+          pattern="[0-9]{6}"
+          required
+          placeholder="134444"
+        /><br /><br />
+
+        <label for="wydzial">Wydział:</label>
+        <select id="wydzial" name="wydzial">
+          <option value="WIISI">WIISI</option>
+          <option value="WB">WB</option>
+          <option value="WZ">WZ</option>
+          <option value="WIIM">WIMI</option>
+        </select>
+      </fieldset>
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

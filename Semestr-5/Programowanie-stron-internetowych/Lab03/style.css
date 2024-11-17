@@ -1,0 +1,57 @@
+body {
+  background-color: silver;
+  font-family: Verdana;
+  font-size: 18px;
+  background-image: url("kot.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#div1,
+#div3 {
+  background-color: gold;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+span {
+  font-weight: bold;
+}
+
+#span1 {
+  color: green;
+}
+
+#div3 span {
+  color: red;
+}
+
+#div2 {
+  border-style: dashed;
+  border-color: blue;
+  border-width: 2px;
+  margin-bottom: 15px;
+}
+
+#div3 {
+  border-radius: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-left-color: red;
+  border-right-color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.div:hover {
+  background-color: grey !important;
+}
+
+#p2 {
+  text-align: right;
+}

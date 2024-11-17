@@ -1,0 +1,5 @@
+Rozmiar zadania        80               800              8000               80000           max
+Wersja sekwencyjna     0,0000003410     0,0000002810     0,0000002610       0,0000002410    0,0000002600
+Wersja równoległa      0,0000896100     0,0000950200     0,0002090960       0,0007332500    0,0844839350
+Przyspieszenie
+Efektywność

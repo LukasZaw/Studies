@@ -1,0 +1,4 @@
+Liczba rdzeni   1               2               4               8
+Czas            0,0000090270    0,0827728720    0,0796596390    0,0808859940
+Przyspieszenie  -
+Efektywność     -   
