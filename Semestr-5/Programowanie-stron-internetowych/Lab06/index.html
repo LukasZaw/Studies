@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab06 - zadania</title>
+
+    <style>
+      /* Prosty styl (opcjonalnie) */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+        padding: 10px;
+      }
+      button {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem fugit
+      dolorem quidem odit eveniet aliquid consequuntur hic amet repellendus ut
+      sequi quod.
+    </p>
+    <button onclick="changeColor()">Zmiana koloru</button> <br /><br />
+    <hr />
+
+    <p>Podaj nazwe obrazu:</p>
+    <input type="text" id="textImg" /> <br />
+    <button onclick="changeImg()">Zmien obrazek</button> <br /><br />
+
+    <img src="kot1.jpg" height="200px" id="img" /> <br />
+    <hr />
+
+    <ul>
+      <li>punkt 1</li>
+      <li>Punkt 2 - acscda</li>
+      <li>Punkt 3 adasd</li>
+    </ul>
+    Adres linku: <input type="text" id="text11" /> <br />
+    Wyswietlany tekst: <input type="text" id="text2" /> <br />
+    <button onclick="addPoint()">Dodaj punkt</button> <br /><br />
+    <hr />
+
+    <div
+      id="textData"
+      onmouseover="showTime()"
+      onmouseout="normaltext()"
+      onclick="copyDiv()"
+      width="100px;"
+    >
+      Najedz zeby wyswietlic czas
+    </div>
+    <br /><br />
+    <div id="innyDiv">Text dla innego diva....</div>
+    <hr />
+    <hr />
+
+    <h1>Lista zadań</h1>
+    <input type="text" id="taskInput" placeholder="Wpisz zadanie" />
+    <button id="addTaskButton">Dodaj zadanie</button>
+    <p>Liczba zadań: <span id="taskCount">0</span></p>
+    <ul id="taskList"></ul>
+
+    <hr />
+    <h1>Zmiana koloru tła</h1>
+    <button id="green">Zielony</button>
+    <button id="random">Losowy kolor</button>
+    <p class="color-display">
+      Aktualny kolor: <span id="currentColor">biały</span>
+    </p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
