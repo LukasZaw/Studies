@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pobieranie danych za pomocą async/await</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .produkt {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Produkty</h1>
+    <button onclick="pobierzDane()">Pobierz dane</button>
+    <div id="listaProduktow"></div>
+
+    <script>
+      async function pobierzDane() {
+        const response = await fetch(
+          "https://raw.githubusercontent.com/wedeploy-examples/supermarket-web-example/master/products.json"
+        );
+
+        const produkty = await response.json();
+        console.log(produkty);
+        wyswietlProdukty(produkty);
+      }
+
+      function wyswietlProdukty(produkty) {
+        const listaProduktow = document.getElementById("listaProduktow");
+        listaProduktow.innerHTML = "";
+
+        produkty.forEach((produkt) => {
+          const div = document.createElement("div");
+          div.className = "produkt";
+          div.innerHTML = `
+                    <h2>${produkt.title}</h2>
+                    <p><strong>Kategoria:</strong> ${produkt.type}</p>
+                    <p><strong>Cena:</strong> $${produkt.price}</p>
+                `;
+          listaProduktow.appendChild(div);
+        });
+      }
+    </script>
+  </body>
+</html>
