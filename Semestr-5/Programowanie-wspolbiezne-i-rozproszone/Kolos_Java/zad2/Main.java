@@ -1,31 +1,3 @@
-
-public class Main {
-
-    public static void main(String[] args) {
-        int ROZMIAR = 10;
-        int tablica[] = new int[ROZMIAR];
-
-        for (int i = 0; i < ROZMIAR; i++) {
-            tablica[i] = i;
-        }
-
-        Watek w1 = new Watek(tablica, 0, ROZMIAR / 2);
-        Watek w2 = new Watek(tablica, ROZMIAR / 2, ROZMIAR);
-
-        w1.start();
-        w2.start();
-
-        try {
-            w1.join();
-            w2.join();
-        } catch (InterruptedException e) {
-            System.err.println(e);
-        }
-
-        System.err.println("Suma global: " + Watek.zwoc());
-    }
-}
-
 class Watek extends Thread {
     private int[] tablica;
     private int start, koniec;
@@ -51,4 +23,31 @@ class Watek extends Thread {
         return suma_global;
     }
 
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        int ROZMIAR = 10;
+        int tablica[] = new int[ROZMIAR];
+
+        for (int i = 0; i < ROZMIAR; i++) {
+            tablica[i] = i;
+        }
+
+        Watek w1 = new Watek(tablica, 0, 5);
+        Watek w2 = new Watek(tablica, 5, 10);
+
+        w1.start();
+        w2.start();
+
+        try {
+            w1.join();
+            w2.join();
+        } catch (InterruptedException e) {
+            System.err.println(e);
+        }
+
+        System.err.println("Suma global: " + Watek.zwoc());
+    }
 }
