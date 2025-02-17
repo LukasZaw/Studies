@@ -1,80 +1,79 @@
 class Skrzynka {
-    private String wiadomosc = null;
+    private String wiadomosc;
+    private boolean pusta = true;
 
-    public synchronized void wyslijWiadomosc(String msg) throws InterruptedException {
-        while (wiadomosc != null) {
-            wait();
+    // Metoda do wysyłania wiadomości
+    public synchronized void wyslijWiadomosc(String wiadomosc) throws InterruptedException {
+        while (!pusta) {
+            wait(); // Czekaj, aż wiadomość zostanie odebrana
         }
-        wiadomosc = msg;
-        notify();
+        this.wiadomosc = wiadomosc;
+        pusta = false;
+        notifyAll(); // Powiadom odbiorcę
     }
 
+    // Metoda do odbierania wiadomości
     public synchronized String odbierzWiadomosc() throws InterruptedException {
-        while (wiadomosc == null) {
-            wait();
+        while (pusta) {
+            wait(); // Czekaj, aż wiadomość zostanie wysłana
         }
-        String msg = wiadomosc;
-        wiadomosc = null;
-        notify();
-        return msg;
+        String wiadomoscOdebrana = wiadomosc;
+        pusta = true;
+        notifyAll(); // Powiadom nadawcę
+        return wiadomoscOdebrana;
     }
 }
 
-class Nadawca extends Thread {
-    private Skrzynka s;
+class Nadawca implements Runnable {
+    private Skrzynka skrzynka;
 
-    Nadawca(Skrzynka s) {
-        this.s = s;
+    public Nadawca(Skrzynka skrzynka) {
+        this.skrzynka = skrzynka;
     }
 
+    @Override
     public void run() {
-        int czas = (int) (Math.random() * 2000);
         try {
-            for (int i = 0; i < 10; i++) {
-                Thread.sleep(czas);
-                s.wyslijWiadomosc("Nadawca N, wiadomosc " + i);
+            for (int i = 1; i <= 20; i++) {
+                String wiadomosc = "Nadawca A, wiadomość " + i;
+                System.out.println("Nadawca wysyła: " + wiadomosc);
+                skrzynka.wyslijWiadomosc(wiadomosc);
+                Thread.sleep((int) (Math.random() * 1000)); // Czas nadawcy (0-1000 ms)
             }
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 }
 
-class Odbiorca extends Thread {
-    private Skrzynka s;
+class Odbiorca implements Runnable {
+    private Skrzynka skrzynka;
 
-    Odbiorca(Skrzynka s) {
-        this.s = s;
+    public Odbiorca(Skrzynka skrzynka) {
+        this.skrzynka = skrzynka;
     }
 
+    @Override
     public void run() {
-        int czas = (int) (Math.random() * 500);
         try {
-            for (int i = 0; i < 10; i++) {
-                Thread.sleep(czas);
-                System.out.println(s.odbierzWiadomosc());
+            for (int i = 1; i <= 20; i++) {
+                String wiadomosc = skrzynka.odbierzWiadomosc();
+                System.out.println("Odbiorca odebrał: " + wiadomosc);
+                Thread.sleep((int) (Math.random() * 300)); // Czas odbiorcy (0-300 ms)
             }
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Skrzynka s = new Skrzynka();
-        Nadawca n = new Nadawca(s);
-        Odbiorca o = new Odbiorca(s);
+        Skrzynka skrzynka = new Skrzynka();
+        Thread nadawca = new Thread(new Nadawca(skrzynka));
+        Thread odbiorca = new Thread(new Odbiorca(skrzynka));
 
-        n.start();
-        o.start();
-
-        try {
-            n.join();
-            o.join();
-        } catch (InterruptedException ex) {
-            System.out.println(ex);
-        }
-
+        nadawca.start();
+        odbiorca.start();
     }
 }
