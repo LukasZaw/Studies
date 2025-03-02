@@ -32,4 +32,5 @@
 
 ## Projects:
 * [Projekt domu - OpenGL, GLFW3](Semestr-4/Grafika-komputerowa-i-wizualizacja/Project)
+* [Projekt pomiaru odległości - STM32 ](Semestr-5/Systemy-wbudowane)
 
