@@ -23,6 +23,13 @@
 * [Paradygmaty programowania](Semestr-4/Paradygmaty-programowania)
 * [Grafika komputerowa i wizualizacja](Semestr-4/Grafika-komputerowa-i-wizualizacja)
 
+### Semestr 5
+* [Analiza i przetwarzanie obrazow cyfrowych](Semestr-5/Analiza-i-przetwarzanie-obrazow-cyfrowych)
+* [Programowanie stron internetowych](Semestr-5/Programowanie-stron-internetowych)
+* [Programowanie wspolbiezne i rozproszone](Semestr-5/Programowanie-wspolbiezne-i-rozproszone)
+* [Sztuczna inteligencja](Semestr-5/Sztuczna-inteligencja)
+* [Systemy wbudowane - projekt](Semestr-5/Systemy-wbudowane)
+
 ## Projects:
 * [Projekt domu - OpenGL, GLFW3](Semestr-4/Grafika-komputerowa-i-wizualizacja/Project)
 
