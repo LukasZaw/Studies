@@ -4,6 +4,8 @@
 
 This project implements a system that measures distance using an ultrasonic sensor and displays the results on an SSD1306 OLED screen. It also measures the temperature and calculates the speed of sound based on the temperature. The system utilizes an STM32 microcontroller to interface with various sensors and components.
 
+<img src="IMG.jpg" width="450" title="Project image">
+
 ## Features
 
 - **Distance Measurement:** The system uses two input capture channels on the STM32 microcontroller to measure the time taken by an ultrasonic signal to travel. The distance is then calculated based on the speed of sound, which is influenced by the temperature.
