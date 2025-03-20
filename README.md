@@ -30,7 +30,13 @@
 * [Sztuczna inteligencja](Semestr-5/Sztuczna-inteligencja)
 * [Systemy wbudowane - projekt](Semestr-5/Systemy-wbudowane)
 
+### Semestr 6
+* [Aplikacje WWWW](Semestr-6/Aplikacje-WWW)
+* [Interaktywna grafika i prezentacja danych](Semestr-6/Interaktywna-grafika-i-prezentacja-danych)
+* [Optymalizacja-stron-internetowych](https://github.com/LukasZaw/Website-SEO)
+
 ## Projects:
 * [Projekt domu - OpenGL, GLFW3](Semestr-4/Grafika-komputerowa-i-wizualizacja/Project)
 * [Projekt pomiaru odległości - STM32 ](Semestr-5/Systemy-wbudowane)
+* [Optymalizacja Strony - SEO](https://github.com/LukasZaw/Website-SEO)
 
