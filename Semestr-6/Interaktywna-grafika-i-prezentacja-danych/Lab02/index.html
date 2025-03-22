@@ -6,7 +6,7 @@
     <title>Strona</title>
     <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="jQuery/jquery-ui.css">
+    <link rel="stylesheet" href="jQuery/jquery-ui.css" />
     <script src="jQuery/external/jquery/jquery.js"></script>
     <script src="jQuery/jquery-ui.js"></script>
 
@@ -27,33 +27,59 @@
       <main>
         <div id="dialog-form" title="Dodaj nową osobę">
           <p class="validateTips">Wszystkie pola są wymagane.</p>
-        
+
           <form>
             <fieldset>
               <label for="name">Imie</label>
-              <input type="text" name="name" id="name" value="Adam" class="text ui-widget-content ui-corner-all">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value="Adam"
+                class="text ui-widget-content ui-corner-all"
+              />
               <label for="email">Nazwisko</label>
-              <input type="text" name="email" id="email" value="Kowalski" class="text ui-widget-content ui-corner-all">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value="Kowalski"
+                class="text ui-widget-content ui-corner-all"
+              />
               <label for="password">Punkty</label>
-              <input type="number" name="password" id="password" value="0" class="text ui-widget-content ui-corner-all">
+              <input
+                type="number"
+                name="password"
+                id="password"
+                value="0"
+                class="text ui-widget-content ui-corner-all"
+              />
               <label for="radio">Wybierz poziom:</label>
               <div id="radio">
-                <input type="radio" id="lvl1" name="project">
+                <input type="radio" id="lvl1" name="project" />
                 <label for="lvl1">Poziom 1</label>
-           
-                <input type="radio" id="lvl2" name="project" checked="checked">
+
+                <input
+                  type="radio"
+                  id="lvl2"
+                  name="project"
+                  checked="checked"
+                />
                 <label for="lvl2">Poziom 2</label>
-           
-                <input type="radio" id="lvl3" name="project">
+
+                <input type="radio" id="lvl3" name="project" />
                 <label for="lvl3">Poziom 3</label>
               </div>
               <!-- Allow form submission with keyboard without duplicating the dialog button -->
-              <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+              <input
+                type="submit"
+                tabindex="-1"
+                style="position: absolute; top: -1000px"
+              />
             </fieldset>
           </form>
         </div>
 
-        
         <div id="accordion">
           <h3>Section 1</h3>
           <div>
@@ -63,13 +89,10 @@
                 <li><a href="#tabs-2">Sterowanie</a></li>
               </ul>
               <div id="tabs-1">
-                                
                 <h2>Table</h2>
-                
-               
-                
+
                 <table id="users" class="ui-widget ui-widget-content">
-                  <tr  class="ui-widget-header ">
+                  <tr class="ui-widget-header">
                     <th>Imie</th>
                     <th>Nazwisko</th>
                     <th>Punkty</th>
@@ -96,7 +119,6 @@
                   </tr>
                 </table>
                 <button id="create-user">Dodaj nową osobę</button>
-
               </div>
               <div id="tabs-2">
                 <div class="slider-container">
@@ -104,41 +126,41 @@
                   <div id="temperature-slider" class="slider"></div>
                   <span id="temperature-value" class="value">20°C</span>
                 </div>
-              
+
                 <div class="slider-container">
                   <label for="humidity-slider">Wilgotność (0-100%):</label>
                   <div id="humidity-slider" class="slider"></div>
                   <span id="humidity-value" class="value">50%</span>
                 </div>
-              
+
                 <div class="slider-container">
-                  <label for="airquality-slider">Jakość powietrza (0-500):</label>
+                  <label for="airquality-slider"
+                    >Jakość powietrza (0-500):</label
+                  >
                   <div id="airquality-slider" class="slider"></div>
                   <span id="airquality-value" class="value">250</span>
                 </div>
- 
               </div>
             </div>
           </div>
 
-
-
           <h3>Section 2</h3>
           <div>
             <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
+              Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit
+              amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris
+              turpis porttitor velit, faucibus interdum tellus libero ac justo.
+              Vivamus non quam. In suscipit faucibus urna.
             </p>
           </div>
           <h3>Section 3</h3>
           <div>
             <p>
-            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
+              lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
+              Phasellus ac libero ac tellus pellentesque semper. Sed ac felis.
+              Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
+              iaculis leo purus venenatis dui.
             </p>
             <ul>
               <li>List item one</li>
@@ -149,20 +171,18 @@
           <h3>Section 4</h3>
           <div>
             <p>
-            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-            mauris vel est.
+              Cras dictum. Pellentesque habitant morbi tristique senectus et
+              netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum
+              primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+              Aenean lacinia mauris vel est.
             </p>
             <p>
-            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat
+              lectus. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos.
             </p>
           </div>
         </div>
-
-
 
         <div class="articles">
           <div class="article">
