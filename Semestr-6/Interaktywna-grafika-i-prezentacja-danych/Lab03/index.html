@@ -6,7 +6,7 @@
     <title>Strona</title>
     <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="jQuery/jquery-ui.css">
+    <link rel="stylesheet" href="jQuery/jquery-ui.css" />
     <script src="jQuery/external/jquery/jquery.js"></script>
     <script src="jQuery/jquery-ui.js"></script>
 
@@ -17,103 +17,151 @@
       <h1>Strona</h1>
     </header>
     <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#">Strona Główna</a></li>
-          <li><a href="#">O nas</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
-      </nav>
+      <aside class="left-panel">
+        <div class="module">
+          <h3>Kalendarz</h3>
+          <div id="calendar"></div>
+        </div>
+        <div class="module">
+          <h3>Interesujące odsyłacze</h3>
+          <ul>
+            <li><a href="https://example.com">Example 1</a></li>
+            <li><a href="https://example.com">Example 2</a></li>
+            <li><a href="https://example.com">Example 3</a></li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Ostatnie wydarzenia</h3>
+          <p>Brak nowych wydarzeń.</p>
+        </div>
+      </aside>
+
       <main>
+        <button id="add-tab-button">Dodaj zakładkę</button>
+        <div id="add-tab-dialog" title="Dodaj nową zakładkę">
+          <form>
+            <fieldset>
+              <label for="tab-title">Tytuł zakładki</label>
+              <input
+                type="text"
+                name="tab-title"
+                id="tab-title"
+                class="text ui-widget-content ui-corner-all"
+              />
+              <label for="tab-content">Treść zakładki</label>
+              <textarea
+                name="tab-content"
+                id="tab-content"
+                class="text ui-widget-content ui-corner-all"
+              ></textarea>
+              <!-- Prevent form submission -->
+              <input
+                type="submit"
+                tabindex="-1"
+                style="position: absolute; top: -1000px"
+              />
+            </fieldset>
+          </form>
+        </div>
         <div id="dialog-form" title="Dodaj nową osobę">
           <p class="validateTips">Wszystkie pola są wymagane.</p>
-        
+
           <form>
             <fieldset>
               <label for="name">Imie</label>
-              <input type="text" name="name" id="name" value="Adam" class="text ui-widget-content ui-corner-all">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value="Adam"
+                class="text ui-widget-content ui-corner-all"
+              />
               <label for="email">Nazwisko</label>
-              <input type="text" name="email" id="email" value="Kowalski" class="text ui-widget-content ui-corner-all">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                value="Kowalski"
+                class="text ui-widget-content ui-corner-all"
+              />
               <label for="password">Punkty</label>
-              <input type="number" name="password" id="password" value="0" class="text ui-widget-content ui-corner-all">
+              <input
+                type="number"
+                name="password"
+                id="password"
+                value="0"
+                class="text ui-widget-content ui-corner-all"
+              />
               <label for="radio">Wybierz poziom:</label>
               <div id="radio">
-                <input type="radio" id="lvl1" name="project">
+                <input type="radio" id="lvl1" name="project" />
                 <label for="lvl1">Poziom 1</label>
-           
-                <input type="radio" id="lvl2" name="project" checked="checked">
+
+                <input
+                  type="radio"
+                  id="lvl2"
+                  name="project"
+                  checked="checked"
+                />
                 <label for="lvl2">Poziom 2</label>
-           
-                <input type="radio" id="lvl3" name="project">
+
+                <input type="radio" id="lvl3" name="project" />
                 <label for="lvl3">Poziom 3</label>
               </div>
               <!-- Allow form submission with keyboard without duplicating the dialog button -->
-              <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+              <input
+                type="submit"
+                tabindex="-1"
+                style="position: absolute; top: -1000px"
+              />
             </fieldset>
           </form>
         </div>
 
-        
         <div id="accordion">
-          <div class="group">
           <h3>Section 1</h3>
           <div>
-            <div id="dialog" title="Tab data">
-              <form>
-                <fieldset class="ui-helper-reset">
-                  <label for="tab_title">Title</label>
-                  <input type="text" name="tab_title" id="tab_title" value="Tab Title" class="ui-widget-content ui-corner-all">
-                  <label for="tab_content">Content</label>
-                  <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all">Tab content</textarea>
-                </fieldset>
-              </form>
-            </div>
-             
-            <button id="add_tab">Add Tab</button>
-
             <div id="tabs">
               <ul>
                 <li><a href="#tabs-1">Tabela</a></li>
                 <li><a href="#tabs-2">Sterowanie</a></li>
               </ul>
-              <div id="tabs-1">       
-                <fieldset>
-                  <legend>Kolory wierszy: </legend>
-                  <input type="checkbox" name="checkbox-1" id="checkbox-1">
-
-                </fieldset><br>
-                
+              <div id="tabs-1">
                 <h2>Table</h2>
-               
+
                 <table id="users" class="ui-widget ui-widget-content">
-                  <tr  class="ui-widget-header ">
+                  <tr class="ui-widget-header">
                     <th>Imie</th>
                     <th>Nazwisko</th>
                     <th>Punkty</th>
+                    <th>Akcja</th>
                   </tr>
                   <tr>
                     <td>Peter</td>
                     <td>Griffin</td>
                     <td>100</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                   <tr>
                     <td>Lois</td>
                     <td>Griffin</td>
                     <td>150</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                   <tr>
                     <td>Joe</td>
                     <td>Swanson</td>
                     <td>300</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                   <tr>
                     <td>Cleveland</td>
                     <td>Brown</td>
                     <td>250</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                 </table>
                 <button id="create-user">Dodaj nową osobę</button>
-
               </div>
               <div id="tabs-2">
                 <div class="slider-container">
@@ -121,43 +169,38 @@
                   <div id="temperature-slider" class="slider"></div>
                   <span id="temperature-value" class="value">20°C</span>
                 </div>
-              
+
                 <div class="slider-container">
                   <label for="humidity-slider">Wilgotność (0-100%):</label>
                   <div id="humidity-slider" class="slider"></div>
                   <span id="humidity-value" class="value">50%</span>
                 </div>
-              
+
                 <div class="slider-container">
-                  <label for="airquality-slider">Jakość powietrza (0-500):</label>
+                  <label for="airquality-slider"
+                    >Jakość powietrza (0-500):</label
+                  >
                   <div id="airquality-slider" class="slider"></div>
                   <span id="airquality-value" class="value">250</span>
                 </div>
- 
               </div>
             </div>
           </div>
-          </div>
 
-          <div class="group">
           <h3>Section 2</h3>
           <div>
             <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
+              Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit
+              amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris
+              turpis porttitor velit, faucibus interdum tellus libero ac justo.
             </p>
           </div>
-          </div>
-          <div class="group">
           <h3>Section 3</h3>
           <div>
             <p>
-            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
+              lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
+              Phasellus ac libero ac tellus pellentesque semper. Sed ac felis.
             </p>
             <ul>
               <li>List item one</li>
@@ -165,26 +208,15 @@
               <li>List item three</li>
             </ul>
           </div>
-        </div>
-
-        <div class="group">
           <h3>Section 4</h3>
           <div>
             <p>
-            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-            mauris vel est.
+              Cras dictum. Pellentesque habitant morbi tristique senectus et
+              netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum
             </p>
-            <p>
-            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.
-            </p>
+            <p>Suspendisse eu nisl. Nullam ut libero.</p>
           </div>
         </div>
-        </div>
-
 
         <div class="articles">
           <div class="article">
@@ -198,7 +230,7 @@
             <h2>Artykuł 2</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              vitae ex, odit ullam dignissimos tempora quam saepe.
+              vitae ex, odit ullam dignissimos tempora quam często.
             </p>
           </div>
           <div class="article">
@@ -210,6 +242,29 @@
           </div>
         </div>
       </main>
+
+      <aside class="right-panel">
+        <div class="module">
+          <h3>Aktualności</h3>
+          <p>Brak nowych aktualności.</p>
+        </div>
+        <div class="module">
+          <h3>Najlepiej oceniono</h3>
+          <ul>
+            <li>Produkt A - 5/5</li>
+            <li>Produkt B - 4.5/5</li>
+            <li>Produkt C - 4/5</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Galeria zdjęć</h3>
+          <div id="cycler">
+            <img src="image1.jpg" alt="Image 1" />
+            <img src="image2.jpg" alt="Image 2" style="display: none" />
+            <img src="image3.jpg" alt="Image 3" style="display: none" />
+          </div>
+        </div>
+      </aside>
     </div>
     <footer>
       <p>2025 Moja Strona.</p>
