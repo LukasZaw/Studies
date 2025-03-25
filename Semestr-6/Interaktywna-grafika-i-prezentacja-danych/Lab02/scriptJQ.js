@@ -1,12 +1,84 @@
 $(function () {
-  $("#accordion").accordion();
+  $("#accordion").accordion({
+    animate: {
+      duration: 2000,
+      easing: "easeOutBounce",
+    },
+  });
 });
 
 $(function () {
-  $("#tabs").tabs();
+  $("#tabs")
+    .tabs({
+      show: { effect: "fadeIn", duration: 500 },
+    })
+    .find(".ui-tabs-nav")
+    .sortable({
+      axis: "x",
+      stop: function () {
+        $("#tabs").tabs("refresh");
+      },
+    });
+
+  var tabCounter = 3; // Start after existing tabs
+  var dialog, form;
+
+  function addTab() {
+    var tabTitle = $("#tab-title").val();
+    var tabContent = $("#tab-content").val();
+
+    if (tabTitle && tabContent) {
+      var id = "tabs-" + ++tabCounter;
+      $("#tabs ul").append(
+        "<li><a href='#" + id + "'>" + tabTitle + "</a></li>"
+      );
+      $("#tabs").append("<div id='" + id + "'><p>" + tabContent + "</p></div>");
+      $("#tabs").tabs("refresh");
+      dialog.dialog("close");
+    }
+  }
+
+  dialog = $("#add-tab-dialog").dialog({
+    autoOpen: false,
+    modal: true,
+    buttons: {
+      "Dodaj zakładkę": addTab,
+      Anuluj: function () {
+        dialog.dialog("close");
+      },
+    },
+    close: function () {
+      form[0].reset();
+    },
+  });
+
+  form = dialog.find("form").on("submit", function (event) {
+    event.preventDefault();
+    addTab();
+  });
+
+  $("#add-tab-button")
+    .button()
+    .on("click", function () {
+      dialog.dialog("open");
+    });
 });
 
 $("#radio").controlgroup();
+
+$(function () {
+  // Dodanie checkboxa do nagłówka tabeli
+  $("#users").before(
+    '<div><label><input type="checkbox" id="toggle-color"> Zaznacz parzyste wiersze</label></div>'
+  );
+
+  // Obsługa zdarzenia kliknięcia checkboxa
+  $("#toggle-color").on("change", function () {
+    $("#users tr:even").each(function () {
+      $(this).toggleClass("highlight", 500);
+    });
+  });
+});
 
 $(function () {
   var dialog,
@@ -56,8 +128,8 @@ $(function () {
     valid = valid && checkLength(password, "punkty", 1, 10);
 
     if (valid) {
-      $("#users tbody").append(
-        "<tr>" +
+      var newRow = $(
+        "<tr style='display: none;'>" +
           "<td>" +
           name.val() +
           "</td>" +
@@ -67,12 +139,23 @@ $(function () {
           "<td>" +
           password.val() +
           "</td>" +
+          "<td><button class='delete-row'>Usuń</button></td>" +
           "</tr>"
       );
+      $("#users tbody").append(newRow);
+      newRow.show("slow"); // Smoothly show the new row
       dialog.dialog("close");
     }
     return valid;
   }
+
+  $(document).on("click", ".delete-row", function () {
+    $(this)
+      .closest("tr")
+      .hide("slow", function () {
+        $(this).remove(); // Remove the row after the animation
+      });
+  });
 
   dialog = $("#dialog-form").dialog({
     autoOpen: false,
@@ -217,4 +300,19 @@ $(document).ready(function () {
     var green = Math.max(0, 255 - value * 0.51);
     return "rgb(" + red + ", " + green + ", 0)";
   }
+});
+
+$(function () {
+  // Initialize the calendar
+  $("#calendar").datepicker();
+
+  // Cycler functionality
+  function cycleImages() {
+    var $active = $("#cycler img:visible");
+    var $next = $active.next().length ? $active.next() : $("#cycler img:first");
+    $active.fadeOut(1000, function () {
+      $next.fadeIn(1000);
+    });
+  }
+  setInterval(cycleImages, 3000);
 });

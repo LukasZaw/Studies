@@ -17,14 +17,52 @@
       <h1>Strona</h1>
     </header>
     <div class="container">
-      <nav>
-        <ul>
-          <li><a href="#">Strona Główna</a></li>
-          <li><a href="#">O nas</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
-      </nav>
+      <aside class="left-panel">
+        <div class="module">
+          <h3>Kalendarz</h3>
+          <div id="calendar"></div>
+        </div>
+        <div class="module">
+          <h3>Interesujące odsyłacze</h3>
+          <ul>
+            <li><a href="https://example.com">Example 1</a></li>
+            <li><a href="https://example.com">Example 2</a></li>
+            <li><a href="https://example.com">Example 3</a></li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Ostatnie wydarzenia</h3>
+          <p>Brak nowych wydarzeń.</p>
+        </div>
+      </aside>
+
       <main>
+        <button id="add-tab-button">Dodaj zakładkę</button>
+        <div id="add-tab-dialog" title="Dodaj nową zakładkę">
+          <form>
+            <fieldset>
+              <label for="tab-title">Tytuł zakładki</label>
+              <input
+                type="text"
+                name="tab-title"
+                id="tab-title"
+                class="text ui-widget-content ui-corner-all"
+              />
+              <label for="tab-content">Treść zakładki</label>
+              <textarea
+                name="tab-content"
+                id="tab-content"
+                class="text ui-widget-content ui-corner-all"
+              ></textarea>
+              <!-- Prevent form submission -->
+              <input
+                type="submit"
+                tabindex="-1"
+                style="position: absolute; top: -1000px"
+              />
+            </fieldset>
+          </form>
+        </div>
         <div id="dialog-form" title="Dodaj nową osobę">
           <p class="validateTips">Wszystkie pola są wymagane.</p>
 
@@ -96,26 +134,31 @@
                     <th>Imie</th>
                     <th>Nazwisko</th>
                     <th>Punkty</th>
+                    <th>Akcja</th>
                   </tr>
                   <tr>
                     <td>Peter</td>
                     <td>Griffin</td>
                     <td>100</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                   <tr>
                     <td>Lois</td>
                     <td>Griffin</td>
                     <td>150</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                   <tr>
                     <td>Joe</td>
                     <td>Swanson</td>
                     <td>300</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                   <tr>
                     <td>Cleveland</td>
                     <td>Brown</td>
                     <td>250</td>
+                    <td><button class="delete-row">Usuń</button></td>
                   </tr>
                 </table>
                 <button id="create-user">Dodaj nową osobę</button>
@@ -150,7 +193,6 @@
               Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit
               amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris
               turpis porttitor velit, faucibus interdum tellus libero ac justo.
-              Vivamus non quam. In suscipit faucibus urna.
             </p>
           </div>
           <h3>Section 3</h3>
@@ -159,8 +201,6 @@
               Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
               lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
               Phasellus ac libero ac tellus pellentesque semper. Sed ac felis.
-              Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu
-              iaculis leo purus venenatis dui.
             </p>
             <ul>
               <li>List item one</li>
@@ -173,14 +213,8 @@
             <p>
               Cras dictum. Pellentesque habitant morbi tristique senectus et
               netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum
-              primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-              Aenean lacinia mauris vel est.
             </p>
-            <p>
-              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat
-              lectus. Class aptent taciti sociosqu ad litora torquent per
-              conubia nostra, per inceptos himenaeos.
-            </p>
+            <p>Suspendisse eu nisl. Nullam ut libero.</p>
           </div>
         </div>
 
@@ -196,7 +230,7 @@
             <h2>Artykuł 2</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-              vitae ex, odit ullam dignissimos tempora quam saepe.
+              vitae ex, odit ullam dignissimos tempora quam często.
             </p>
           </div>
           <div class="article">
@@ -208,6 +242,29 @@
           </div>
         </div>
       </main>
+
+      <aside class="right-panel">
+        <div class="module">
+          <h3>Aktualności</h3>
+          <p>Brak nowych aktualności.</p>
+        </div>
+        <div class="module">
+          <h3>Najlepiej oceniono</h3>
+          <ul>
+            <li>Produkt A - 5/5</li>
+            <li>Produkt B - 4.5/5</li>
+            <li>Produkt C - 4/5</li>
+          </ul>
+        </div>
+        <div class="module">
+          <h3>Galeria zdjęć</h3>
+          <div id="cycler">
+            <img src="image1.jpg" alt="Image 1" />
+            <img src="image2.jpg" alt="Image 2" style="display: none" />
+            <img src="image3.jpg" alt="Image 3" style="display: none" />
+          </div>
+        </div>
+      </aside>
     </div>
     <footer>
       <p>2025 Moja Strona.</p>

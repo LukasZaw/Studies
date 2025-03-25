@@ -310,9 +310,9 @@ $(function () {
   function cycleImages() {
     var $active = $("#cycler img:visible");
     var $next = $active.next().length ? $active.next() : $("#cycler img:first");
-    $active.fadeOut(1000, function () {
-      $next.fadeIn(1000);
+    $active.fadeOut(2000, function () {
+      $next.fadeIn(2000);
     });
   }
-  setInterval(cycleImages, 3000);
+  setInterval(cycleImages, 4000);
 });

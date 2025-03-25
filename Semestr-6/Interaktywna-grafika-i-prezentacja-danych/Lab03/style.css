@@ -213,8 +213,7 @@ button.delete-row:active {
 }
 
 #cycler img {
-  width: 100%;
-  height: auto;
+  width: 30vh;
   border-radius: 5px;
 }
 
