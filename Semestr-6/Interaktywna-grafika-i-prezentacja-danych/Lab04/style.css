@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+header {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+nav {
+  width: 250px;
+  background: #444;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  background: #b6e4f8;
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+}
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.article {
+  background: #f4f4f4;
+  padding: 15px;
+  flex: 1;
+  min-width: 400px;
+  border: #333 solid 1px;
+  border-radius: 5px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 140px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.thumbnail:hover {
+  transform: scale(1.2) rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  transform: scale(0.5) translateY(-50px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox.active img {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+@keyframes rotateTwice {
+  0% {
+    transform: scale(0.5) translateY(-50px) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.75) translateY(-25px) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(360deg);
+  }
+}
+
+.lightbox img.rotate {
+  animation: rotateTwice 0.5s ease forwards;
+}
+
+@keyframes bounceFade {
+  0% {
+    transform: scale(0.2) translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3) translateY(-20px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.lightbox img.bounce {
+  animation: bounceFade 1s ease forwards;
+}
