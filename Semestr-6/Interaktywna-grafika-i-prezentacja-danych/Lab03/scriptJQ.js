@@ -153,7 +153,7 @@ $(function () {
     $(this)
       .closest("tr")
       .hide("slow", function () {
-        $(this).remove(); // Remove the row after the animation
+        $(this).remove();
       });
   });
 
