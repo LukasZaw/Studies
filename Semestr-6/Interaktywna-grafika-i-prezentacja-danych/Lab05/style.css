@@ -75,7 +75,6 @@ footer {
   border-radius: 5px;
 }
 
-
 /* Photo gallery */
 
 .photo-gallery {
@@ -91,7 +90,10 @@ footer {
   overflow: hidden;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.8s cubic-bezier(.71,.2,.26,.83);
+  transition: transform 0.8s cubic-bezier(0.71, 0.2, 0.26, 0.83);
+  opacity: 0;
+  transform: translateX(0) translateY(0);
+  animation: fly-in 2s ease-out forwards;
 }
 .thumbnail img {
   width: 100%;
@@ -101,8 +103,8 @@ footer {
 
 .thumbnail:hover {
   transform: scale(1.35) rotate(6deg);
-  transition: transform 0.8s cubic-bezier(.02,-1.15,.4,1.05);
-  animation: shake-tl 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  transition: transform 0.8s cubic-bezier(0.02, -1.15, 0.4, 1.05);
+  animation: shake-tl 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 @keyframes shake-tl {
   0%,
@@ -128,6 +130,18 @@ footer {
   }
   90% {
     transform: rotate(2deg);
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    opacity: 0.3;
+    transform: translateX(calc(-100vw + 50px)) translateY(calc(-100vh + 50px));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -160,11 +174,10 @@ footer {
 
 /* Animations */
 
-
 .lightbox img.roll-in-blurred-left {
-	animation: roll-in-blurred-left 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+  animation: roll-in-blurred-left 1.6s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
- @keyframes roll-in-blurred-left {
+@keyframes roll-in-blurred-left {
   0% {
     transform: translateX(-1000px) rotate(-720deg);
     filter: blur(50px);
@@ -192,25 +205,26 @@ footer {
   }
 }
 .lightbox img.slide-in-elliptic-bottom-fwd {
-	animation: slide-in-elliptic-bottom-fwd 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-elliptic-bottom-fwd 1.2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes rotateTwice {
   0% {
     -webkit-transform: scale(1) rotateZ(0);
-            transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
   }
   50% {
     -webkit-transform: scale(1.5) rotateZ(180deg);
-            transform: scale(1.5) rotateZ(180deg);
+    transform: scale(1.5) rotateZ(180deg);
   }
   100% {
     -webkit-transform: scale(1) rotateZ(360deg);
-            transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
   }
 }
 .lightbox img.rotate {
-	animation: rotateTwice 0.8s linear 2 both;
+  animation: rotateTwice 0.8s linear 2 both;
 }
 
 @keyframes bounceFade {
@@ -231,12 +245,11 @@ footer {
   animation: bounceFade 1.5s ease forwards;
 }
 
-
 /* Fade out */
 .slide-out-elliptic-top-bck {
-	animation: slide-out-elliptic-top-bck 1s ease-in both;
+  animation: slide-out-elliptic-top-bck 1s ease-in both;
 }
- @keyframes slide-out-elliptic-top-bck {
+@keyframes slide-out-elliptic-top-bck {
   0% {
     transform: translateY(0) rotateX(0) scale(1);
     transform-origin: 50% 1400px;
