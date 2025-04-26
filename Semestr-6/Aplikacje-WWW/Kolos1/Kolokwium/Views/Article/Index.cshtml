@@ -1,0 +1,32 @@
+@model List<Kolokwium.Models.Article>
+@{
+    ViewData["Title"] = "Lista Artykułów";
+}
+
+<h2>Lista Artykułów</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tytuł</th>
+            <th>Treść</th>
+            <th>Data publikacji</th>
+            <th>Autor</th>
+            <th>Kategoria</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+                <td>@article.Id</td>
+                <td>@article.Title</td>
+                <td>@article.Content</td>
+                <td>@article.CreationDate.ToString("yyyy-MM-dd")</td>
+                <td>@article.Author.FirstName</td>
+                <td>@article.Category.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

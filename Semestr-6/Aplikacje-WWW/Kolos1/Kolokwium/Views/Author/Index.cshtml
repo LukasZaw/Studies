@@ -1,0 +1,27 @@
+@model List<Kolokwium.Models.Author>
+
+@{
+    ViewData["Title"] = "Lista autorów";
+}
+
+<h2>Lista autorów</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var author in Model)
+        {
+            <tr>
+                <td>@author.Id</td>
+                <td>@author.FirstName</td>
+                <td>@author.LastName</td>
+            </tr>
+        }
+    </tbody>
+</table>

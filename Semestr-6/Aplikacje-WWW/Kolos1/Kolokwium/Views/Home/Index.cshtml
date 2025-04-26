@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Strona główna";
+}
+
+<h2>Strona główna</h2>
+
+<div class="link-item">
+    <a asp-controller="Author" asp-action="Index"><strong>Autorzy</strong></a>
+</div>
+<div class="link-item">
+    <a asp-controller="Category" asp-action="Index"><strong>Kategorie</strong></a>
+</div>
+<div class="link-item">
+    <a asp-controller="Article" asp-action="Index"><strong>Artykuły</strong></a>
+</div>
+<div class="link-item">
+    <a asp-controller="Tag" asp-action="Index"><strong>Tagi</strong></a>
+</div>
+<div class="link-item">
+    <a asp-controller="Comment" asp-action="Index"><strong>Komentarze</strong></a>
+</div>
+
+<style>
+    .link-item {
+        margin: 10px 0;
+    }
+</style>

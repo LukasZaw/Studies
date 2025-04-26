@@ -1,0 +1,28 @@
+@model List<Kolokwium.Models.Comment>
+@{
+    ViewData["Title"] = "Lista komentarzy";
+}
+
+<h2>Lista komentarzy</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tytuł</th>
+            <th>Treść</th>
+            <th>Artykuł</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comment in Model)
+        {
+            <tr>
+                <td>@comment.Id</td>
+                <td>@comment.Title</td>
+                <td>@comment.Content</td>
+                <td>@comment.ArticleId</td>
+            </tr>
+        }
+    </tbody>
+</table>

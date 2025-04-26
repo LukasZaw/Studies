@@ -1,0 +1,29 @@
+@model List<Kolokwium.Models.Category>
+@{
+    ViewData["Title"] = "Lista kategorii";
+}
+
+<h2>Lista kategorii</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nazwa</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Name</td>
+            </tr>
+        }
+    </tbody>
+        </tr>
+    </thead>
+
+</table>
+
+<a asp-action="Add" class="btn btn-primary">Dodaj kategorię</a>
