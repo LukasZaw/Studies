@@ -1,0 +1,8 @@
+@model List<Kolokwium.Models.Category>
+
+<h2>Kategorie</h2>
+
+@foreach(var category in Model)
+{
+    <p>@category.Id | @category.Name</p>
+}

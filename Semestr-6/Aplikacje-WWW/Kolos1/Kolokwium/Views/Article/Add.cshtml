@@ -1,0 +1,50 @@
+@model Kolokwium.Models.Article
+
+@{
+    ViewData["Title"] = "Dodaj artykuł";
+}
+
+<h2>Dodaj artykuł</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="Title">Tytuł</label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Lead">Lead</label>
+        <input asp-for="Lead" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Content">Treść</label>
+        <textarea asp-for="Content" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="AuthorId">Autor</label>
+        <select asp-for="AuthorId" class="form-control" asp-items="ViewBag.Authors">
+            <option value="">-- wybierz autora --</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="CategoryId">Kategoria</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option value="">-- wybierz kategorię --</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Dodaj</button>
+</form>
+
+<p>AuthorId: @Model?.AuthorId</p>
+<p>CategoryId: @Model?.CategoryId</p>

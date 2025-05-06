@@ -1,0 +1,8 @@
+@model List<Kolokwium.Models.Author>
+
+<h2>Lista autorów</h2>
+
+@foreach(var author in Model)
+{
+    <p>@author.Id @author.FirstName @author.LastName </p>
+}
