@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animacja Wykresu Kołowego</title>
+    <style>
+      canvas {
+        border: 1px solid #000;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas2" width="500" height="500"></canvas>
+
+    <script>
+      const canvas2 = document.getElementById("myCanvas2");
+      const ctx2 = canvas2.getContext("2d");
+
+      var tab = [10, 30, 50, 120];
+      var total = tab.reduce(function (sum, value) {
+        return sum + value;
+      }, 0);
+
+      var radius = 250;
+      var centerX = canvas2.width / 2;
+      var centerY = canvas2.height / 2;
+      var startAngle = 0;
+      var currentAngle = startAngle;
+      var animationDuration = 2000;
+      var startTime = null;
+
+      function animatePieChart(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        var progress = (timestamp - startTime) / animationDuration;
+
+        if (progress > 1) {
+          progress = 1;
+        }
+
+        ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+
+        currentAngle = startAngle;
+
+        for (var i = 0; i < tab.length; i++) {
+          var value = tab[i];
+          var sliceAngle = (value / total) * (2 * Math.PI);
+
+          var targetAngle = sliceAngle * progress;
+
+          ctx2.fillStyle =
+            "rgba(0 , " + (0 + i * 50) + ", " + (200 + i * 50) + ", 1)";
+
+          ctx2.beginPath();
+          ctx2.lineTo(centerX, centerY);
+          ctx2.arc(
+            centerX,
+            centerY,
+            radius,
+            currentAngle,
+            currentAngle + targetAngle
+          );
+          ctx2.closePath();
+          ctx2.fill();
+
+          currentAngle += sliceAngle;
+        }
+
+        if (progress < 1) {
+          window.requestAnimationFrame(animatePieChart);
+        }
+      }
+
+      window.requestAnimationFrame(animatePieChart);
+    </script>
+  </body>
+</html>

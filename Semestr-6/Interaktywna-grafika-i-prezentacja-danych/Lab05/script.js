@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const thumbnails = document.querySelectorAll(".thumbnail");
 
   thumbnails.forEach((thumbnail) => {
-    const randomDelay = Math.random() * 3; // Random delay between 0 and 2 seconds
-    const randomX = (Math.random() - 0.5) * 200 + "vw"; // Random X offset (-100vw to 100vw)
-    const randomY = (Math.random() - 0.5) * 200 + "vh"; // Random Y offset (-100vh to 100vh)
+    const randomDelay = Math.random() * 3;
+    const randomX = (Math.random() - 0.5) * 200 + "vw";
+    const randomY = (Math.random() - 0.5) * 200 + "vh";
 
     thumbnail.style.animationDelay = `${randomDelay}s`;
     thumbnail.style.transform = `translate(${randomX}, ${randomY})`;

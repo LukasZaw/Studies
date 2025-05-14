@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas0" width="800" height="300" style="border:1px solid #000000;"></canvas>
+    
+    <script>    
+        const canvas = document.getElementById("myCanvas0");
+        const ctx = canvas.getContext("2d");
+
+        let szerokosc = 70;
+        let wysokosc = 20;
+        
+
+        ctx.beginPath();
+        ctx.lineWidth = 3;
+        ctx.moveTo(0,wysokosc);
+
+        for (let i = 0; i < 100; i++) {
+            
+            const x = i * szerokosc;
+            console.log(x, wysokosc);
+            
+            if(i%2==0){
+                ctx.strokeStyle = "blue";
+                ctx.lineTo(x,wysokosc);
+                ctx.lineTo(x+szerokosc,wysokosc);
+
+            }
+            else{
+                ctx.strokeStyle = "red";
+                ctx.lineTo(x,szerokosc);
+                ctx.lineTo(x+szerokosc,szerokosc);
+            }
+
+            ctx.stroke();
+        }
+    </script>
+    <br>
+
+    <canvas id="myCanvas2" width="500" height="500" style="border:1px solid #000000;"></canvas>
+    
+    <script>    
+        const canvas2 = document.getElementById("myCanvas2");
+        const ctx2 = canvas2.getContext("2d");
+         var tab = [10, 30, 50, 120];
+
+         var total = tab.reduce(function(sum, value) {
+             return sum + value;
+         }, 0);
+
+         var radius = 250;
+         var centerX = canvas2.width / 2;
+         var centerY = canvas2.height / 2;
+         var startAngle = 0;
+ 
+        var currentAngle = startAngle;
+
+
+        for (var i = 0; i < tab.length; i++) {
+            var value = tab[i];
+            var sliceAngle = (value / total) * (2 * Math.PI);
+
+            ctx2.fillStyle = 'rgba(0 , ' + (0 + i * 50) + ', ' + (200 + i * 50) + ', 1)';
+
+            ctx2.beginPath();
+            ctx2.lineTo(centerX, centerY);
+            ctx2.arc(centerX, centerY, radius, currentAngle, currentAngle + sliceAngle);
+            ctx2.closePath();
+            ctx2.fill()
+
+            currentAngle += sliceAngle;
+        }
+       
+    </script>
+
+
+
+    <canvas id="myCanvas3" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <script>
+        var canvas3 = document.getElementById('myCanvas3');
+        var ctx3 = canvas3.getContext('2d');
+
+
+        var x = 30, y = 30, width = 300, height = 200, radius = 40;
+
+        var gradient = ctx3.createLinearGradient(x, y, x + width, y + height);
+        gradient.addColorStop(0, 'rgba(255, 0, 0, 1)');  //czerwony
+        gradient.addColorStop(1, 'rgba(0, 0, 255, 1)');  //niebieski
+
+
+        ctx3.beginPath();
+        ctx3.moveTo(x + radius, y);
+        ctx3.lineTo(x + width - radius, y);
+        ctx3.arcTo(x + width, y, x + width, y + height, radius);
+        ctx3.lineTo(x + width, y + height - radius);
+        ctx3.arcTo(x + width, y + height, x + width - radius, y + height, radius);
+        ctx3.lineTo(x + radius, y + height);
+        ctx3.arcTo(x, y + height, x, y + height - radius, radius);
+        ctx3.lineTo(x, y + radius);
+        ctx3.arcTo(x, y, x + radius, y, radius);
+        ctx3.closePath();
+        ctx3.fillStyle = gradient;
+        ctx3.fill();
+
+    </script>
+    <br>
+
+    <canvas id="myCanvas4" width="400" height="400" style="border:1px solid #000000;"></canvas>
+    <script>
+        var canvas4 = document.getElementById("myCanvas4");
+        var ctx4 = canvas4.getContext("2d");
+
+        //koło
+        var numTeeth = 12;
+        var r0 = 100;
+        var r1 = 100;
+        var r2 = 120;
+        var centerX = canvas4.width / 2;
+        var centerY = canvas4.height / 2;
+
+
+        ctx4.fillStyle = "#ffcc00";
+        for (var i = 0; i < numTeeth; i++) {
+            var angle = (2 * Math.PI / numTeeth) * i;
+            var x1 = centerX + r1 * Math.cos(angle);
+            var y1 = centerY + r1 * Math.sin(angle);
+
+            var x2 = centerX + r2 * Math.cos(angle); 
+            var y2 = centerY + r2 * Math.sin(angle);
+
+            var x3 = centerX + r2 * Math.cos(angle + Math.PI / numTeeth);
+            var y3 = centerY + r2 * Math.sin(angle + Math.PI / numTeeth);
+
+            var x4 = centerX + r1 * Math.cos(angle + Math.PI / numTeeth);
+            var y4 = centerY + r1 * Math.sin(angle + Math.PI / numTeeth);
+
+            ctx4.beginPath();
+            ctx4.moveTo(x1, y1);
+            ctx4.lineTo(x2, y2);
+            ctx4.lineTo(x3, y3);
+            ctx4.lineTo(x4, y4);
+            ctx4.closePath();
+            ctx4.fill();
+        }
+
+        ctx4.beginPath();
+        ctx4.arc(centerX, centerY, r0, 0, 2 * Math.PI);
+        ctx4.fillStyle = "#ffcc00";
+        ctx4.fill();
+        
+        //otwory
+        var holeRadius = 12;
+        var holeCount = 5;
+        for (var j = 0; j < holeCount; j++) {
+            var angleHole = (2 * Math.PI / holeCount) * j;
+            var holeX = centerX + (r0 - 60) * Math.cos(angleHole);
+            var holeY = centerY + (r0 - 60) * Math.sin(angleHole);
+
+            ctx4.beginPath();
+            ctx4.arc(holeX, holeY, holeRadius, 0, 2 * Math.PI); 
+            ctx4.fillStyle = "#ff2222"; 
+            ctx4.fill();
+        }
+
+    </script>
+
+</body>
+</html>

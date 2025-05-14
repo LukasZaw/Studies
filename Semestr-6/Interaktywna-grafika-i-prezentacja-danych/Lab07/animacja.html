@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Animacja Piłki</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="AnimationCanvas" width="800" height="500"></canvas>
+
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById("AnimationCanvas");
+      var context = canvas.getContext("2d");
+
+      var last_time, stop, linear_speed;
+      var ballRadius = 22;
+      var ballX = 100, ballY = 200;
+      var speedX = 400, speedY = 300;
+      
+      function InitAnimation() {
+        stop = false;
+        var date = new Date();
+        last_time = date.getTime();
+        linear_speed = 200;
+        
+        window.requestAnimationFrame(drawAnimation);
+      }
+
+
+      function drawAnimation() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        var date = new Date();
+        var time_interval = date.getTime() - last_time;
+
+        var distanceX = speedX * time_interval / 1000;
+        var distanceY = speedY * time_interval / 1000;
+        
+        ballX += distanceX;
+        ballY += distanceY;
+
+        if (ballX + ballRadius >= canvas.width || ballX - ballRadius < 0) {
+            speedX = -speedX;
+            context.fillStyle = "blue";
+
+        }
+        if (ballY + ballRadius >= canvas.height || ballY - ballRadius < 0) {
+          speedY = -speedY;
+          context.fillStyle = "green";
+
+        }
+
+        context.save();
+        context.beginPath();
+        context.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
+        <!-- context.fillStyle = "red"; -->
+        context.fill();
+        context.closePath();
+        context.restore();
+
+
+        last_time = date.getTime();
+        if (!stop) window.requestAnimationFrame(drawAnimation);
+      }
+
+      InitAnimation();
+    }
+  </script>
+
+</body>
+</html>

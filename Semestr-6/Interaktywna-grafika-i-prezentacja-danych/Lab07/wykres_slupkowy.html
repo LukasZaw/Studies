@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animowany wykres słupkowy</title>
+    <style>
+      canvas {
+        border: 1px solid #000;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="barChartCanvas" width="600" height="400"></canvas>
+    <script>
+      var dane_wykresu = {
+        serie: [
+          [10, 30, 45, 24, 79],
+          [24, 15, 33, 34, 50],
+        ],
+        etykiety: ["label 1", "label 2", "label 3", "label 4", "label 5"],
+        tytul: "Animowany wykres słupkowy",
+        type: "wykres_slupkowy",
+      };
+
+      const canvas = document.getElementById("barChartCanvas");
+      const ctx = canvas.getContext("2d");
+      const width = canvas.width;
+      const height = canvas.height;
+      const margin = 50;
+      const barWidth = 30;
+      const barGap = 20;
+      const seriesGap = 10;
+      const numSeries = dane_wykresu.serie.length;
+      const numBars = dane_wykresu.etykiety.length;
+
+      let maxVal = 0;
+      dane_wykresu.serie.forEach((serie) => {
+        serie.forEach((val) => {
+          if (val > maxVal) maxVal = val;
+        });
+      });
+
+      // Animation
+      const animationDuration = 2000;
+      let startTime = null;
+
+      function drawAxes() {
+        ctx.save();
+        ctx.strokeStyle = "#333";
+        ctx.beginPath();
+        ctx.moveTo(margin, margin);
+        ctx.lineTo(margin, height - margin);
+        ctx.lineTo(width - margin, height - margin);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      function drawLabels() {
+        ctx.save();
+        ctx.font = "14px Arial";
+        ctx.textAlign = "center";
+        for (let i = 0; i < numBars; i++) {
+          let x =
+            margin +
+            barGap +
+            i * (numSeries * barWidth + seriesGap + barGap) +
+            (numSeries * barWidth + seriesGap) / 2;
+          ctx.fillText(dane_wykresu.etykiety[i], x, height - margin + 20);
+        }
+
+        ctx.font = "bold 18px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText(dane_wykresu.tytul, width / 2, margin / 2);
+        ctx.restore();
+      }
+
+      function animateBars(timestamp) {
+        if (!startTime) startTime = timestamp;
+        let progress = (timestamp - startTime) / animationDuration;
+        if (progress > 1) progress = 1;
+
+        ctx.clearRect(0, 0, width, height);
+        drawAxes();
+        drawLabels();
+
+        for (let i = 0; i < numBars; i++) {
+          for (let j = 0; j < numSeries; j++) {
+            let val = dane_wykresu.serie[j][i];
+            let scaledHeight =
+              (val / maxVal) * (height - 2 * margin) * progress;
+            let x =
+              margin +
+              barGap +
+              i * (numSeries * barWidth + seriesGap + barGap) +
+              j * barWidth;
+            let y = height - margin - scaledHeight;
+            ctx.save();
+            ctx.fillStyle = j === 0 ? "#ee9900" : "#334577";
+            ctx.fillRect(x, y, barWidth, scaledHeight);
+            ctx.restore();
+          }
+        }
+
+        if (progress < 1) {
+          window.requestAnimationFrame(animateBars);
+        }
+      }
+
+      window.requestAnimationFrame(animateBars);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas0" width="600" height="600" style="border:1px solid #000000;"></canvas>
+    
+    <script>    
+    const canvas = document.getElementById("myCanvas0");
+    const ctx = canvas.getContext("2d");
+
+    var scaleX = 30;
+    var scaleY = 30;
+    const c = 0;
+
+    const originX = canvas.width / 2;
+    const originY = canvas.height / 2;
+
+    ctx.translate(originX, originY);
+    ctx.scale(1, -1);
+
+    ctx.save();
+    ctx.strokeStyle = "#aaa";
+    ctx.lineWidth = 1;
+
+    ctx.beginPath();
+    ctx.moveTo(-originX, 0);
+    ctx.lineTo(originX, 0);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(0, -originY);
+    ctx.lineTo(0, originY);
+    ctx.stroke();
+    ctx.restore();
+
+
+    ctx.beginPath();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "blue";
+
+    const step = 0.01;
+    var firstPoint = true;
+
+    for (let x = -10; x <= 10; x += step) {
+        const y = Math.sin(x) + 0.5 * x - c;
+
+        const px = x * scaleX;
+        const py = y * scaleY;
+
+        if (firstPoint) {
+        ctx.moveTo(px, py);
+        firstPoint = false;
+        } else {
+        ctx.lineTo(px, py);
+        }
+    }
+
+    ctx.stroke();
+  
+    </script>
+
+    <canvas id="myCanvas1" width="600" height="600" style="border:1px solid #000000;"></canvas>
+
+    <script>
+        const canvas1 = document.getElementById("myCanvas1");
+        const ctx1 = canvas1.getContext("2d");
+
+        var scaleX = 40;
+        var scaleY = 40;    
+
+        ctx1.translate(originX, originY);
+        ctx.scale(1, -1);
+
+        ctx1.save();
+        ctx1.strokeStyle = "#aaa";
+        ctx1.lineWidth = 1;
+
+        // Oś X
+        ctx1.beginPath();
+        ctx1.moveTo(-originX, 0);
+        ctx1.lineTo(originX, 0);
+        ctx1.stroke();
+
+        // Oś Y
+        ctx1.beginPath();
+        ctx1.moveTo(0, -originY);
+        ctx1.lineTo(0, originY);
+        ctx1.stroke();
+        ctx1.restore();
+
+
+        ctx1.beginPath();
+        ctx1.lineWidth = 2;
+        ctx1.strokeStyle = "red";
+
+        var firstPoint = true;
+
+        for (let x = -10; x <= 10; x += step) {
+            const y = Math.sin(2 * x) * Math.cos(3 * x) + 0.5 * x - c;
+
+            const px = x * scaleX;
+            const py = y * scaleY;
+
+            if (firstPoint) {
+            ctx1.moveTo(px, -py);
+            firstPoint = false;
+            } else {
+            ctx1.lineTo(px, -py);
+            }
+        }
+        ctx1.stroke();
+    </script>
+</body>
+</html>
