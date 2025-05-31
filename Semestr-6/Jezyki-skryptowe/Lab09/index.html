@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Wszystkie auta</h1>
+    <div>
+      <strong>Marki:</strong>
+      <span id="brands-list"></span>
+      <button id="show-all">Pokaż wszystkie</button>
+    </div>
+    <ul id="cars-list"></ul>
+
+    <h2>Dodaj nowe auto</h2>
+    <form id="car-form">
+      <input name="model" placeholder="Model" required />
+      <input name="marka" placeholder="Marka" required />
+      <input name="moc" placeholder="Moc" required />
+      <input name="kolor" placeholder="Kolor" required />
+      <input
+        name="rok_produkcji"
+        placeholder="Rok produkcji"
+        required
+        type="number"
+      />
+      <button type="submit">Dodaj</button>
+    </form>
+    <div id="form-msg"></div>
+
+    <script>
+      function renderCar(car) {
+        return `
+          <strong>${car.marka} ${car.model}</strong> 
+          | Moc: ${car.moc} KM 
+          | Kolor: ${car.kolor} 
+          | Rok: ${car.rok_produkcji}
+        `;
+      }
+
+      function loadCars(url = "/cars") {
+        fetch(url)
+          .then((res) => {
+            if (!res.ok) throw new Error();
+            return res.json();
+          })
+          .then((cars) => {
+            const list = document.getElementById("cars-list");
+            list.innerHTML = "";
+            if (cars.length === 0) {
+              list.innerHTML = "<li>Brak aut do wyświetlenia.</li>";
+              return;
+            }
+            cars.forEach((car) => {
+              const li = document.createElement("li");
+              li.innerHTML = renderCar(car);
+              const delBtn = document.createElement("button");
+              delBtn.textContent = "Usuń";
+              delBtn.style.marginLeft = "10px";
+              delBtn.onclick = function () {
+                if (confirm("Na pewno usunąć to auto?")) {
+                  fetch(`/cars/${car._id}`, { method: "DELETE" })
+                    .then((res) => {
+                      if (!res.ok) throw new Error();
+                      loadBrands();
+                      loadCars(url);
+                    })
+                    .catch(() => alert("Błąd usuwania auta"));
+                }
+              };
+              li.appendChild(delBtn);
+              list.appendChild(li);
+            });
+          })
+          .catch(() => {
+            document.getElementById("cars-list").innerHTML =
+              "<li>Błąd ładowania danych</li>";
+          });
+      }
+
+      function loadBrands() {
+        fetch("/brands")
+          .then((res) => res.json())
+          .then((brands) => {
+            const brandsList = document.getElementById("brands-list");
+            brandsList.innerHTML = "";
+            brands.forEach((brand, idx) => {
+              const link = document.createElement("a");
+              link.href = "#";
+              link.textContent = brand;
+              link.style.marginRight = "10px";
+              link.addEventListener("click", (e) => {
+                e.preventDefault();
+                loadCars(`/cars/brand/${encodeURIComponent(brand)}`);
+              });
+              brandsList.appendChild(link);
+
+              const delBrandBtn = document.createElement("button");
+              delBrandBtn.textContent = "Usuń markę";
+              delBrandBtn.style.marginRight = "15px";
+              delBrandBtn.onclick = function () {
+                if (
+                  confirm(`Na pewno usunąć wszystkie auta marki "${brand}"?`)
+                ) {
+                  fetch(`/brands/${encodeURIComponent(brand)}`, {
+                    method: "DELETE",
+                  })
+                    .then((res) => {
+                      if (!res.ok) throw new Error();
+                      loadBrands();
+                      loadCars();
+                    })
+                    .catch(() => alert("Błąd usuwania marki"));
+                }
+              };
+              brandsList.appendChild(delBrandBtn);
+            });
+          });
+      }
+
+      document.getElementById("show-all").onclick = () => loadCars();
+
+      loadBrands();
+      loadCars();
+
+      document
+        .getElementById("car-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const data = {
+            model: form.model.value,
+            marka: form.marka.value,
+            moc: form.moc.value,
+            kolor: form.kolor.value,
+            rok_produkcji: form.rok_produkcji.value,
+          };
+          fetch("/cars", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          })
+            .then((res) => {
+              if (!res.ok) throw new Error("Błąd dodawania auta");
+              return res.json();
+            })
+            .then(() => {
+              form.reset();
+              document.getElementById("form-msg").textContent = "Dodano auto!";
+              loadBrands();
+              loadCars();
+            })
+            .catch(() => {
+              document.getElementById("form-msg").textContent =
+                "Błąd dodawania auta";
+            });
+        });
+    </script>
+  </body>
+</html>
