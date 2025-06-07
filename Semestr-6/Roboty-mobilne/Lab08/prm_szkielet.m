@@ -37,7 +37,7 @@ end
 
 %% [3] Tworzenie planera PRM
 prm = mobileRobotPRM(map, 150);
-prm.ConnectionDistance = 20;
+prm.ConnectionDistance = 50;
 
 %% [4] Planowanie ścieżki
 path = findpath(prm, start, goal);

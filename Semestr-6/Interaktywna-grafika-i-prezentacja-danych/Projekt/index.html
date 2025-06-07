@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Space Shooter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="column" id="stats">
+        <h2>Statystyki Gracza</h2>
+        <form id="player-name-form" style="display: none">
+          <input
+            type="text"
+            id="player-name-input"
+            placeholder="Podaj swoją nazwę"
+            maxlength="16"
+            required
+          />
+          <button type="submit">OK</button>
+        </form>
+        <p id="player-name"></p>
+        <button
+          id="reset-player-name"
+          style="font-size: 12px; margin-bottom: 8px"
+        >
+          Zmień nazwę gracza
+        </button>
+        <div id="asteroids-destroyed" style="margin: 8px">
+          Zestrzelone asteroidy: 0
+        </div>
+      </div>
+
+      <div class="column">
+        <p id="player-message" style="color: #0ff; margin-bottom: 8px"></p>
+        <div id="score">Wynik: 0</div>
+        <canvas id="game" width="550" height="780"></canvas>
+      </div>
+
+      <div class="column" id="leaderboard">
+        <h2>🏆 Leaderboard</h2>
+        <ol id="leaderboard-list"></ol>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

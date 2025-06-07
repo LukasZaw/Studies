@@ -37,7 +37,7 @@ end
 
 %% [3] Planer Lazy PRM
 prm = mobileRobotPRM(map, 150);
-prm.ConnectionDistance = 60;
+prm.ConnectionDistance = 20;
 
 path = findpath(prm, start, goal);
 

@@ -1,0 +1,115 @@
+body {
+  background: url("Images/PixelBackgroundSeamlessVertically.png") no-repeat
+    center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.308);
+  backdrop-filter: blur(3px);
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  display: block;
+  background: #222d;
+  border: 1px solid #00f6;
+  margin: 10px auto 0 auto;
+  box-shadow: 0 0 55px 10px #00f6, 0 0 80px 25px #0ff8;
+  border-radius: 12px;
+  transition: box-shadow 0.4s;
+}
+
+canvas:hover {
+  box-shadow: 0 0 55px 10px rgba(127, 127, 255, 0.4),
+    0 0 80px 25px rgba(0, 60, 255, 0.533);
+}
+
+#score {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  text-shadow: 0 0 10px #0ff, 0 0 10px #00f;
+}
+
+#stats {
+  margin: 16px;
+  color: #fee;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 4px #0ff4;
+  min-height: 300px;
+}
+
+#leaderboard {
+  margin: 16px;
+  color: #fee;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 4px #0ff4;
+  min-height: 300px;
+}
+
+#player-name-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+#player-name-input {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #0ff;
+  font-size: 1em;
+}
+#player-name-form button {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #0ff;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#player-name-form button:hover {
+  background: #0cc;
+}
+
+#reset-player-name {
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid #0ff;
+  background: #111c;
+  color: #0ff;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+#reset-player-name:hover {
+  background: #0ff;
+  color: #111;
+  border: 1px solid #fff;
+}
