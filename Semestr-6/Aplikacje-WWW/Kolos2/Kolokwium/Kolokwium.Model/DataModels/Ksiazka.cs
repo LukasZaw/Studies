@@ -14,7 +14,8 @@ public class Ksiazka
 
     public virtual IList<Biblioteka> Biblioteki { get; set; } // relacje wiele ksiazek do wielu bibliotek
 
-    public string Wydawnictwo { get; set; }
+    public int WydawnictwoId { get; set; }
+    public virtual Wydawnictwo Wydawnictwo { get; set; }
     public int RokWydania { get; set; }
 
 }

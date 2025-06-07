@@ -25,6 +25,8 @@ builder.Services.AddTransient(typeof(ILogger), typeof(Logger<Program>));
 builder.Services.AddTransient<IStringLocalizer, StringLocalizer<BaseController>>();
 //builder.Services.AddTransient<IService, Service>();
 builder.Services.AddTransient<IKsiazkaService, KsiazkaService>(); // Register your services here
+builder.Services.AddTransient<IWydawnictwoService, WydawnictwoService>();
+
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {

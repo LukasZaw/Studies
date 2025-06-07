@@ -32,6 +32,11 @@ namespace Kolokwium.DAL
                 .HasOne(k => k.Autor)
                 .WithMany(a => a.Ksiazki)
                 .HasForeignKey(k => k.AutorId);
+
+            modelBuilder.Entity<Ksiazka>()
+                .HasOne(k => k.Wydawnictwo)
+                .WithMany(w => w.Ksiazki)
+                .HasForeignKey(k => k.WydawnictwoId);
            
         }
     }

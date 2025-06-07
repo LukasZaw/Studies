@@ -27,6 +27,6 @@ public class AddKsiazkaController : Controller
             _ksiazkaService.AddKsiazka(addKsiazkaVm);
             return RedirectToAction("Index", "Ksiazka");
         }
-        return View(addKsiazkaVm);
+        return View("~/Views/Ksiazka/Add.cshtml", addKsiazkaVm);
     }
 }

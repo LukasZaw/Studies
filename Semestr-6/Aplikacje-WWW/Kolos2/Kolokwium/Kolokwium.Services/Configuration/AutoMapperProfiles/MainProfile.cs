@@ -8,10 +8,11 @@ public class MainProfile : Profile
     public MainProfile()
     {
        CreateMap<Ksiazka, KsiazkiVm>()
-            .ForMember(dest => dest.ImieNazwiskoAutora,
-                opt => opt.MapFrom(src => src.Autor.Imie + " " + src.Autor.Nazwisko));
-            CreateMap<AddKsiazkaVm, Ksiazka>();
-
+            .ForMember(dest => dest.ImieNazwiskoAutora, opt => opt.MapFrom(src => src.Autor.Imie + " " + src.Autor.Nazwisko))
+            .ForMember(dest => dest.WydawnictwoNazwa, opt => opt.MapFrom(src => src.Wydawnictwo.Nazwa));
+        CreateMap<AddKsiazkaVm, Ksiazka>()
+            .ForMember(dest => dest.WydawnictwoId, opt => opt.MapFrom(src => src.WydawnictwoId));
+        CreateMap<Wydawnictwo, WydawnictwoVm>();
     }
 }
 
