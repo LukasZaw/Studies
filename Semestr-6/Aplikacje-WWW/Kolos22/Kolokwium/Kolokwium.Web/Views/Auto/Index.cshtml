@@ -1,0 +1,35 @@
+@model IEnumerable<Kolokwium.ViewModel.VM.AutoVm>
+<h2>Auta</h2>
+<table class="table">
+
+<thead>
+    <tr>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Rok Prod</th>
+        <th>Parking </th>
+        <th>Imie Nazwisko Autora</th>
+        <th>Usuń</th>
+    </tr>
+</thead>
+<tbody>
+    @foreach (var auto in Model)
+    {
+        <tr>
+            <td>@auto.Marka</td>
+            <td>@auto.Model</td>
+            <td>@auto.RokProdukcji</td>
+            <td>@auto.ParkingNazwa</td>
+            <td>@auto.WlascicielImieNazwisko</td>
+
+            <td>
+                <form asp-controller="DeleteAuto" asp-action="Delete" method="post">
+                    <input type="hidden" name="id" value="@auto.Id" />
+                    <button type="submit" class="btn btn-danger">Usuń</button>
+                </form>
+            </td>
+        </tr>
+    }
+</tbody>
+</table>
+<a  asp-controller="AddAuto" asp-action="Add">Dodaj auto</a>
