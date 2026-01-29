@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <h2>Lista</h2>
+      <thead>
+        <tr>
+          <th>Nazwa</th>
+          <th>Zasięg</th>
+          <th>Max prędkość</th>
+          <th>Rozmiar kół</th>
+          <th>Ocena</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{range .}}
+        <tr>
+          <td>{{.Nazwa}}</td>
+          <td>{{.Zasieg}}</td>
+          <td>{{.Maxpredkosc}}</td>
+          <td>{{.Rozmiarkol}}</td>
+          <td>{{.Ocena}}</td>
+        </tr>
+        {{end}}
+      </tbody>
+    </table>
+  </body>
+</html>

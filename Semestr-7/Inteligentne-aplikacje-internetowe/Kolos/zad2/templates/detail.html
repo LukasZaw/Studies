@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Item</title>
+  </head>
+  <body>
+    <h1>Item #{{.ID}}</h1>
+    <p><b>Name:</b> {{.Name}}</p>
+    <p><b>Price:</b> {{printf "%.2f" .Price}}</p>
+
+    <p><a href="/items">Back to list</a></p>
+    <p>JSON: <a href="/api/items?id={{.ID}}">/api/items?id={{.ID}}</a></p>
+  </body>
+</html>

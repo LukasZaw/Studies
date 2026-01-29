@@ -1,0 +1,6 @@
+@kolos_WebAPI_HostAddress = http://localhost:5016
+
+GET {{kolos_WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

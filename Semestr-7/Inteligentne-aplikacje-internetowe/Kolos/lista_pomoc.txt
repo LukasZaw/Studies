@@ -1,0 +1,62 @@
+
+Stwórz foldery: kod, pages, web.
+
+Zainicjalizuj moduł: W terminalu wpisz go mod init kolos.
+
+wszysko: mala litera prywatne , duza publiczna
+
+PAGES
+
+<html>
+<body>
+    <h1>Lista aparatów</h1>
+    <ul>
+        {{ range . }}
+        <li>{{ .Nazwa }} </li>
+        {{ end }}
+    </ul>
+</body>
+</html>
+
+KOD
+
+type Nazwa_wlasna struct {
+	Nazwa  string  `json:"nazwa"`}  --- bez przecinka kolejne
+
+var aparat = []Aparat{{Nazwa: "jakub"},{},}
+
+func  Nazwa_wlasna(b *nazwa_struct , a *nazwa_struct) float64 {}
+func Lista() []nazwa_stuktury {
+	return nazwa_listy
+}
+
+func ListaID(id int) *nazwa_stuktury {
+	return &nazwa_listy[id]
+}
+
+WEB
+
+func Nazwa(w http.ResponseWriter, r *http.Request) {
+	
+	data := kod.Lista()
+	tmpl, err := template.ParseFiles("pages/nazwa.html")
+	if err != nil {
+		http.Error(w, "Błąd szablonu", http.StatusInternalServerError)
+		return
+	}
+	tmpl.Execute(w, data)
+}
+
+func NazwaId(w http.ResponseWriter, r *http.Request)  {
+	id := r.URL.Path[len("/nazwa/"):]
+	index, _ := strconv.Atoi(id)
+	data := kod.nazwa(index) 
+	json.NewEncoder(w).Encode(data) 
+}
+
+
+func StartServer() {
+	http.HandleFunc("/sciezka", nazwafunkcji)
+	fmt.Println("Serwer: http://localhost:8080")
+	http.ListenAndServe(":8080", nil)
+}

@@ -1,0 +1,95 @@
+
+Stwórz foldery: kod, pages, web.
+
+Zainicjalizuj moduł: W terminalu wpisz go mod init kolos.
+
+wszysko: mala litera prywatne , duza publiczna
+
+PAGES
+
+<html>
+<body>
+    <h1>Lista aparatów</h1>
+    <ul>
+        {{ range . }}
+        <li>{{ .Nazwa }} </li>
+        {{ end }}
+    </ul>
+</body>
+</html>
+
+KOD
+
+type Nazwa_wlasna struct {
+	Nazwa  string  `json:"nazwa"`}  --- bez przecinka kolejne
+
+type Beers struct {
+    beers []Beer
+}
+
+type Knn struct {
+    beers *Beers
+}
+
+func LoadBeersFromAPI(url string) *Beers {
+	// 1. Wykonanie zapytania GET do API
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Printf("Błąd pobierania z API: %v\n", err)
+		return &Beers{}
+	}
+	defer resp.Body.Close() // Pamiętaj o zamknięciu strumienia danych
+
+	// 2. Dekodowanie JSON bezpośrednio do plastra (slice) struktur Beer
+	var beersSlice []Beer
+	err = json.NewDecoder(resp.Body).Decode(&beersSlice)
+	if err != nil {
+		fmt.Printf("Błąd dekodowania JSON: %v\n", err)
+		return &Beers{}
+	}
+
+	return &Beers{beers: beersSlice}
+}
+
+func InitializeApi() *Knn {
+	k := Knn{}
+	apiURL := "https://api.przyklad.pl/beers" 
+	k.beers = LoadBeersFromAPI(apiURL)
+	return &k
+}
+
+func (k *Knn) Get10RandomBeers() []*Beer {
+    beers := []*Beer{}
+    for range 10 {
+        index := rand.Intn(len(k.beers.beers))
+        beers = append(beers, &k.beers.beers[index])
+    }
+    return beers
+}
+
+
+WEB
+
+var recsys *knn.Knn = knn.InitializeApi()
+
+
+func Nazwa(w http.ResponseWriter, r *http.Request) {
+	
+	data := kod.recsys()
+///json.NewEncoder(w).Encode(data) ---- jak json zwaramy
+	tmpl, err := template.ParseFiles("pages/nazwa.html")
+	if err != nil {
+		http.Error(w, "Błąd szablonu", http.StatusInternalServerError)
+		return
+	}
+	tmpl.Execute(w, data)
+}
+
+
+func StartServer() {
+	http.HandleFunc("/sciezka", nazwafunkcji)
+	fmt.Println("Serwer: http://localhost:8080")
+	http.ListenAndServe(":8080", nil)
+}
+
+

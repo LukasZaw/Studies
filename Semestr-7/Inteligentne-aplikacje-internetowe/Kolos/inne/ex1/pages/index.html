@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykres</title>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+    <style>
+        body { margin: 0 auto; }
+        #chart { width: 100%; height: 90hw; }
+    </style>
+</head>
+<body>
+    Punktów: <input id="pts" value="100">
+    Grup: <input id="cls" value="10">
+    <button onclick="grupuj()">Grupuj</button>
+    <div id="chart"></div>
+    <script>
+        function grupuj() {
+            const ptf = document.getElementById("pts")
+            const clf = document.getElementById("cls")
+            const crt = document.getElementById("chart")
+            let pts = parseInt(ptf.value)
+            let cls = parseInt(clf.value)
+            pts = Math.min(Math.max(pts, 2), 10000)
+            cls = Math.min(Math.max(cls, 2), pts/2)
+            ptf.value = pts
+            clf.value = cls
+            crt.innerHTML = "Trwa grupowanie..."
+            fetch("/export/" + pts + "/" + cls).then(response => {
+                    crt.innerHTML = "Trwa preparowanie danych..."
+                    return response.json()
+                }).then(data => {
+                    crt.innerHTML = ""
+                    Plotly.newPlot("chart", data, { margin: { l: 0, r: 0, t: 0, b: 0 } })
+                })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<h2>Lista osób</h2>
+
+<table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Lp.</th>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Wiek</th>
+      <th>Email</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (person of people; track person; let idx = $index) {
+      <tr>
+        <td>{{ idx + 1 }}</td>
+        <td>{{ person.firstName }}</td>
+        <td>{{ person.lastName }}</td>
+        <td>{{ person.age }}</td>
+        <td>{{ person.email }}</td>
+        <td>
+          <button type="button" (click)="editPerson(idx)">Edytuj</button>
+          <button type="button" (click)="removePerson(idx)">Usuń</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<h3 *ngIf="editingIndex === null">Dodaj osobę</h3>
+<h3 *ngIf="editingIndex !== null">Edytuj osobę</h3>
+<form (ngSubmit)="addPerson()">
+  <label>
+    Imię:
+    <input type="text" [(ngModel)]="newFirstName" name="firstName" />
+  </label>
+  <br />
+
+  <label>
+    Nazwisko:
+    <input type="text" [(ngModel)]="newLastName" name="lastName" />
+  </label>
+  <br />
+
+  <label>
+    Wiek:
+    <input type="number" [(ngModel)]="newAge" name="age" />
+  </label>
+  <br />
+
+  <label>
+    Email:
+    <input type="email" [(ngModel)]="newEmail" name="email" />
+  </label>
+  <br />
+
+  <button type="submit">
+    {{ editingIndex === null ? "Dodaj" : "Zapisz" }}
+  </button>
+  <button type="button" *ngIf="editingIndex !== null" (click)="cancelEdit()">
+    Anuluj
+  </button>
+</form>

@@ -1,0 +1,3 @@
+ng new kolos_angular1 --minimal=true --no-standalone
+ng generate component list
+ng serve

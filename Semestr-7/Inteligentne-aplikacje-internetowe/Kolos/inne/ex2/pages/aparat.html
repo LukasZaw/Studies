@@ -1,0 +1,10 @@
+<html>
+<body>
+    <h1>Lista aparatów</h1>
+    <ul>
+        {{ range . }}
+        <li>{{ .Nazwa }} {{ .Liczba_megapikseli }} </li>
+        {{ end }}
+    </ul>
+</body>
+</html>
